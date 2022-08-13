@@ -1,0 +1,49 @@
+.banner {
+    width: 100%;
+}
+
+.principal {
+    background: rgb(100, 100, 100);
+    padding: 30px;
+}
+
+.tituto-principal {
+    padding-left: 20px;
+}
+
+.texto-centralizado {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.beneficios {
+    padding: 20px;
+}
+
+.lista {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 420px 20px 30px;
+    list-style: circle;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.itens {
+    font-style: italic;
+}
+
+.imagembeneficios {
+    width: 50%;
+    display: inline-block;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
