@@ -41,7 +41,7 @@ Habilidades
 
 #### 2.3 Git e Github
 
-![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/007.jpg)
+( Certificado )
 
 #### Tecnologias
 
