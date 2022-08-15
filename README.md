@@ -8,10 +8,12 @@
 
 Habilidades
 
-<img align="center" alt="J-LinkedIn" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"> LinkedIn
-🎯 Foco<br>
-📑 Hábitos<br>
-📖 Produtividade I<br>
+<div style="display: block">
+  <img align="center" alt="J-LinkedIn" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"> LinkedIn
+  🎯 Foco
+  📑 Hábitos
+  📖 Produtividade I
+</div>
 
 ##
 
