@@ -1,4 +1,4 @@
-### Trilhas de Aprendizado Concluídas
+### 🎯 Trilhas de Aprendizado Concluídas
 
 ##
 
