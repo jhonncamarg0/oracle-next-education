@@ -17,6 +17,8 @@ Habilidades
 
 ### 2. Trilha Técnica de Iniciante em Programação
 
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/008.jpg)
+
 #### 2.1 Lógica de Programação I e II
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/001.jpg)
@@ -41,7 +43,7 @@ Habilidades
 
 #### 2.3 Git e Github
 
-( Certificado )
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/007.jpg)
 
 #### Tecnologias
 
