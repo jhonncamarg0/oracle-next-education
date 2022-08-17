@@ -1,0 +1,184 @@
+body {
+    font-family: 'Silkscreen', cursive;
+    background: whitesmoke;
+}
+
+header {
+    border-bottom: 1px solid red;
+}
+
+main {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+footer {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.header {
+    width: 99.4%;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+
+.logo {
+    border: 1px solid red;
+
+    width: 50em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.main {
+    width: 99.4%;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+
+.area_entrada_texto {
+    border: 1px solid red;
+
+    width: 50em;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.entrada_texto {
+    width: 30em;
+    padding: 0.5em 0.5em 15em 0.5em;
+    display: block;
+    resize: none;
+    border: none;
+    font-size: 1.5em;
+    overflow: hidden;
+    color: darkslateblue;
+    background: lightgray;
+    border-radius: 0.5em;
+}
+
+.entrada_texto:focus {
+    outline: none;
+}
+
+.aviso_texto_entrada {
+    border: 1px solid red;
+
+    width: 30em;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    text-align: center;
+    display: block;
+}
+
+.area_texto_saida {
+    border: 1px solid red;
+
+    width: 25em;
+    margin: -5em 0.5em 0.5em 0.5em;
+    padding: 0.5em 0.5em 35em 0.5em;
+    display: inline-block;
+    background: lightgray;
+    position: absolute;
+    border-radius: 0.5em;
+}
+
+.saida_texto {
+    width: 19.5em;
+    padding: 0.5em 0.5em 24em 0.5em;
+    resize: none;
+    border: none;
+    font-size: 1.5em;
+    overflow: hidden;
+    color: white;
+    background: darkslateblue;
+    border-radius: 0.5em;
+    position: absolute;
+}
+
+.saida_texto:focus {
+    outline: none;
+}
+
+.aviso_texto_saida {
+    border: 1px solid red;
+
+    margin: 0.5em 1em 0.5em 0.5em;
+    padding: 0.5em 0.5em 8.4em 0.5em;
+    display: block;
+    text-align: center;
+    position: absolute;
+    background: darkslateblue;
+    border-radius: 0.5em;
+}
+
+.aviso_texto_saida h2 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0.5em 0 0.5em 0;
+    color: white;
+}
+
+.aviso_texto_saida p {
+    color: white;
+}
+
+.footer {
+    width: 99.4%;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+
+.botoes {
+    border: 1px solid red;
+
+    width: 50em;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.botao_criptografar {
+    background: darkslateblue;
+    width: 20em;
+    font-weight: bold;
+    padding: 0.5em;
+    color: white;
+    border-radius: 0.5em;
+    border: none;
+    transition: 1s background;
+    cursor: pointer;
+}
+
+.botao_criptografar:hover {
+    background: lightslategray;
+}
+
+.botao_criptografar:active {
+    background: darkslategray;
+}
+
+.botao_descriptografar {
+    background: lightgray;
+    width: 20em;
+    font-weight: bold;
+    padding: 0.5em;
+    color: darkslateblue;
+    border-radius: 0.5em;
+    border: none;
+    transition: 1s background;
+    cursor: pointer;
+}
+
+.botao_descriptografar:hover {
+    background: lightslategray;
+    color: white;
+}
+
+.botao_descriptografar:active {
+    background: darkslategray;
+}
+
+.aviso_texto_entrada:before {
+    content: "⚠";
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Good Lock </title>
+    <link rel="icon" href="./assets/logo.svg">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+
+    <h1 class="logo"><img src="./assets/logo.svg" alt="Logo da Alura"></h1>
+
+</header>
+
+<main class="main">
+
+<div class="textos">
+
+    <section class="area_entrada_texto">
+        <textarea maxlength="742" class="entrada_texto">Digite seu texto</textarea>
+        <label class="aviso_texto_entrada"> Apenas letras minúsculas e sem acento </label>
+    </section>
+
+    <section class="area_texto_saida">
+        <textarea maxlength="742" id="texto_saida" class="saida_texto"></textarea>
+
+        <div id="texto_aviso_saida" class="aviso_texto_saida">
+
+            <img src="./assets/background_image.svg" alt="Imagem de Fundo">
+            <h2> Nenhuma mensagem encontrada </h2>
+            <p> Digite um texto que você deseja criptografar ou descriptografar </p>
+
+        </div>
+    </section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+
+<section class="botoes">
+    <button class="botao_criptografar"> Criptografar </button>
+    <button class="botao_descriptografar"> Descriptografar </button>
+</section>
+
+</footer>
+</body>
+<script src="./index.js"></script>
+</html>
