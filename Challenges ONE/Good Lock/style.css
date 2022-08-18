@@ -92,7 +92,7 @@ body {
 
 .saida_texto {
     width: 19.5em;
-    padding: 0.5em 0.5em 25.4em 0.5em;
+    padding: 0.5em 0.5em 24em 0.5em;
     resize: none;
     border: none;
     font-size: 1.5em;
@@ -105,6 +105,29 @@ body {
 
 .saida_texto:focus {
     outline: none;
+}
+
+.copiar_texto {
+    background: whitesmoke;
+    width: 20em;
+    font-weight: bold;
+    padding: 0.5em;
+    margin: 39.5em 5em;
+    display: block;
+    position: absolute;
+    color: steelblue;
+    border-radius: 0.5em;
+    border: none;
+    transition: 1s background;
+    cursor: pointer;
+}
+
+.copiar_texto:hover {
+    background: darkgray;
+}
+
+.copiar_texto:active {
+    background: darkslategray;
 }
 
 .aviso_texto_saida {

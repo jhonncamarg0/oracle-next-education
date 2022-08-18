@@ -1,13 +1,17 @@
 document.getElementById("texto_saida").style.display = "none";
+document.getElementById("texto_copiar").style.display = "none";
 
 let botao_criptografia = document.getElementById("texto_criptografia");
 let botao_descriptografia = document.getElementById("texto_descriptografia");
+let botao_copiar = document.getElementById("texto_copiar");
 
 function mostrarCodigo() {
     let texto = document.getElementById("texto_saida");
+    let botao = document.getElementById("texto_copiar");
     let imagem = document.getElementById("texto_aviso_saida");
     imagem.style.display = "none";
     texto.style.display = "block";
+    botao.style.display = "block";
 }
 
 function criptografia() {
@@ -21,6 +25,13 @@ function criptografia() {
     mostrarCodigo();
     let codigo2 = document.getElementById("texto_saida");
     codigo2.innerText = u;
+    botao_copiar.innerText = "Copiar texto criptografado";
+    Swal.fire({
+        title: "Criptografado!",
+        text: "",
+        icon: "sucess",
+        confirmButtonText: "Fechar"
+      })
 }
 
 function descriptografia() {
@@ -34,7 +45,27 @@ function descriptografia() {
     mostrarCodigo();
     let codigo2 = document.getElementById("texto_saida");
     codigo2.innerText = u;
+    botao_copiar.innerText = "Copiar texto descriptografado";
+    Swal.fire({
+        title: "Descriptografado!",
+        text: "",
+        icon: "sucess",
+        confirmButtonText: "Fechar"
+      })
+}
+
+function copiar() {
+    let codigo = document.getElementById("texto_saida");
+    codigo.select();
+    document.execCommand("copy");
+    Swal.fire({
+        title: "Copiado!",
+        text: "",
+        icon: "sucess",
+        confirmButtonText: "Fechar"
+      })
 }
 
 botao_criptografia.onclick = criptografia;
 botao_descriptografia.onclick = descriptografia;
+botao_copiar.onclick = copiar;

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
 </head>
 <body>
 <header class="header">
@@ -30,6 +31,7 @@
 
     <section class="area_texto_saida">
         <textarea maxlength="742" id="texto_saida" class="saida_texto"></textarea>
+        <button id="texto_copiar" class="copiar_texto" ></button>
 
         <div id="texto_aviso_saida" class="aviso_texto_saida">
 
@@ -54,4 +56,6 @@
 </footer>
 </body>
 <script src="./index.js"></script>
+<script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
 </html>
