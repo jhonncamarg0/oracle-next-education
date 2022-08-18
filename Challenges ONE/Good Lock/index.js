@@ -21,7 +21,6 @@ function criptografia() {
     let i = o.replace(/i/g, "imes");
     let a = i.replace(/a/g, "ai");
     let u = a.replace(/u/g, "ufat");
-    console.log(u);
     mostrarCodigo();
     let codigo2 = document.getElementById("texto_saida");
     codigo2.innerText = u;
@@ -29,7 +28,7 @@ function criptografia() {
     Swal.fire({
         title: "Criptografado!",
         text: "",
-        icon: "sucess",
+        icon: "info",
         confirmButtonText: "Fechar"
       })
 }
@@ -41,7 +40,6 @@ function descriptografia() {
     let i = o.replace(/imes/g, "i");
     let a = i.replace(/ai/g, "a");
     let u = a.replace(/ufat/g, "u");
-    console.log(u);
     mostrarCodigo();
     let codigo2 = document.getElementById("texto_saida");
     codigo2.innerText = u;
@@ -49,7 +47,7 @@ function descriptografia() {
     Swal.fire({
         title: "Descriptografado!",
         text: "",
-        icon: "sucess",
+        icon: "info",
         confirmButtonText: "Fechar"
       })
 }
@@ -61,7 +59,7 @@ function copiar() {
     Swal.fire({
         title: "Copiado!",
         text: "",
-        icon: "sucess",
+        icon: "info",
         confirmButtonText: "Fechar"
       })
 }
