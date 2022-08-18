@@ -26,7 +26,7 @@ function criptografia() {
     codigo2.innerText = u;
     botao_copiar.innerText = "Copiar texto criptografado";
     let clear = document.getElementById("texto_entrada");
-    clear.value = ""
+    clear.value = "";
     Swal.fire({
         title: "Criptografado!",
         text: "",
@@ -47,7 +47,7 @@ function descriptografia() {
     codigo2.innerText = u;
     botao_copiar.innerText = "Copiar texto descriptografado";
     let clear = document.getElementById("texto_entrada");
-    clear.value = ""
+    clear.value = "";
     Swal.fire({
         title: "Descriptografado!",
         text: "",
