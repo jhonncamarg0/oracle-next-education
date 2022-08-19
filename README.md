@@ -1,4 +1,4 @@
-# 📊 Trilhas de Aprendizado Concluídas
+### 📊 Trilhas de Aprendizado Concluídas
 
 ## 1. Trilha Socioemocional de Produtividade
 
@@ -45,5 +45,3 @@
 
 ##### <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git
 ##### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
-
-##
