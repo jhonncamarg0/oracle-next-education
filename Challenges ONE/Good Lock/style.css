@@ -97,7 +97,7 @@ body {
     font-weight: bold;
     padding: 0.5em;
     margin: 39.5em 5em;
-    display: block;
+    display: inline-block;
     position: absolute;
     color: steelblue;
     border-radius: 0.5em;
