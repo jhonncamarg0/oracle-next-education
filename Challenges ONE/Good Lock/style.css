@@ -137,7 +137,7 @@ body {
 
 .footer {
     width: 99.4%;
-    padding: 0.5em 0 0.5em 0.5em;
+    padding: 0.5em 0 0 0.5em;
 }
 
 .botoes {
@@ -187,6 +187,17 @@ body {
     background: darkslategray;
 }
 
+.copyright {
+    background: steelblue;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    margin: 0 -1em;
+    position: relative;
+    bottom: -1em;
+    border-top: 2px solid #191970;
+}
+
 @media screen and (max-width: 480px) {
 
     .botoes {
@@ -194,5 +205,9 @@ body {
     }
     .area_texto_saida {
         margin: 8em 0.5em 0.5em 1em;
-    }   
+    }
+    .copyright {
+        bottom: -67em;
+        width: 60em;
+    }
 }
