@@ -5,6 +5,7 @@ let botao_criptografia = document.getElementById("texto_criptografia");
 let botao_descriptografia = document.getElementById("texto_descriptografia");
 let botao_copiar = document.getElementById("texto_copiar");
 let tela = document.getElementById("texto_saida");
+let botao = false;
 
 function mostrarCodigo() {
     let imagem = document.getElementById("texto_aviso_saida");
@@ -15,22 +16,36 @@ function mostrarCodigo() {
     botao_copy.style.display = "block";
 }
 
+function recarregar() {
+    if (botao == true) {
+        location.reload();
+    }
+}
+
 function copiarCodigo() {
     let codigoC = document.getElementById("texto_saida");
     codigoC.select();
     document.execCommand("copy");
     Swal.fire({
-        title: "Copiado!",
-        text: "",
+        title: "🔑 Copiado!",
+        text: "Recarregando a página...",
         icon: "info",
         confirmButtonText: "Fechar"
     });
+    setInterval(recarregar, 3000);
 }
 
 function resetarLimite() {
     let codigoC = document.getElementById("texto_saida");
     codigoC.select();
     document.execCommand("copy");
+    Swal.fire({
+        title: "🔑 Copiado!",
+        text: "Recarregando a página...",
+        icon: "info",
+        confirmButtonText: "Fechar"
+    });
+    setInterval(recarregar, 3000);
 }
 
 function criptografia() {
@@ -48,15 +63,16 @@ function criptografia() {
         let clear = document.getElementById("texto_entrada");
         clear.value = "";
         Swal.fire({
-            title: "Criptografado!",
+            title: "🔒 Criptografado!",
             text: "",
             icon: "info",
             confirmButtonText: "Fechar"
         });
+        botao = true;
     }
     else if (codigo == "") {
         Swal.fire({
-            title: "Texto vazio!",
+            title: "⚠️ Texto vazio!",
             text: "Insira algum texto para ser criptografado",
             icon: "info",
             confirmButtonText: "Fechar"
@@ -81,15 +97,16 @@ function descriptografia() {
             let clear = document.getElementById("texto_entrada");
             clear.value = "";
             Swal.fire({
-                title: "Descriptografado!",
+                title: "🔓 Descriptografado!",
                 text: "",
                 icon: "info",
                 confirmButtonText: "Fechar"
             });
+            botao = true;
         }
         else {
             Swal.fire({
-                title: "Texto incompatível!",
+                title: "⚠️ Texto incompatível!",
                 text: "Esse texto não foi criptografado pelo Good Lock",
                 icon: "info",
                 confirmButtonText: "Fechar"
@@ -98,7 +115,7 @@ function descriptografia() {
     }
     else if (codigo == "") {
         Swal.fire({
-            title: "Texto vazio!",
+            title: "⚠️ Texto vazio!",
             text: "Insira algum texto criptografado pelo Good Lock para ser descriptografado",
             icon: "info",
             confirmButtonText: "Fechar"
