@@ -1,22 +1,18 @@
 document.getElementById("texto_saida").style.display = "none";
 document.getElementById("texto_copiar").style.display = "none";
-/* document.getElementById("texto_controle").style.display = "none"; */
 
 let botao_criptografia = document.getElementById("texto_criptografia");
 let botao_descriptografia = document.getElementById("texto_descriptografia");
 let botao_copiar = document.getElementById("texto_copiar");
-/* let botao_controle = document.getElementById("texto_controle"); */
-/* var controle = true; */
+let tela = document.getElementById("texto_saida");
 
 function mostrarCodigo() {
     let imagem = document.getElementById("texto_aviso_saida");
     let texto = document.getElementById("texto_saida");
     let botao_copy = document.getElementById("texto_copiar");
-    /* let botao_control = document.getElementById("texto_controle"); */
     imagem.style.display = "none";
     texto.style.display = "block";
     botao_copy.style.display = "block";
-    /* botao_control.style.display = "inline-block"; */
 }
 
 function copiarCodigo() {
@@ -31,11 +27,11 @@ function copiarCodigo() {
     });
 }
 
-/*
-function resetarControle() {
-    controle = true;
+function resetarLimite() {
+    let codigoC = document.getElementById("texto_saida");
+    codigoC.select();
+    document.execCommand("copy");
 }
-*/
 
 function criptografia() {
     var codigo = document.getElementById("texto_entrada").value;
@@ -113,3 +109,4 @@ function descriptografia() {
 botao_criptografia.onclick = criptografia;
 botao_descriptografia.onclick = descriptografia;
 botao_copiar.onclick = copiarCodigo;
+tela.onclick = resetarLimite;
