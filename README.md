@@ -13,13 +13,13 @@
 #### 📑 Criação de hábitos
 #### 📖 Produtividade
 
-## 2. Trilha Técnica de Iniciante em Programação
+## 2. Trilha técnica de iniciante em programação
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/008.jpg)
 
 ##
 
-### 2.1 Lógica de Programação I e II
+### 2.1 Lógica de programação I e II
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/001.jpg)
 
@@ -29,7 +29,7 @@
 
 ##
 
-#### Linguagens para o Aprendizado da Lógica de Programação
+#### Linguagens para o aprendizado da lógica de programação
 
 ##### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
 ##### <img align="center" alt="J-JS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript
@@ -43,7 +43,7 @@
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/005.jpg)
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/006.jpg)
 
-#### Linguagens Aprendidas
+#### Linguagens aprendidas
 
 ##### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
 ##### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS3
@@ -54,7 +54,7 @@
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/007.jpg)
 
-#### Tecnologias Aprendidas
+#### Tecnologias aprendidas
 
 ##### <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git
 ##### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
