@@ -6,7 +6,7 @@
 
 ##
 
-### 👥Habilidades socioemocionais desenvolvidas
+### 👥 Habilidades socioemocionais desenvolvidas
 
 #### • LinkedIn
 #### • Foco
