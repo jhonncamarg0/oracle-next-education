@@ -22,9 +22,6 @@
 ### 2.1 Lógica de programação I e II
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/001.jpg)
-
-##
-
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/002.jpg)
 
 ##
@@ -43,6 +40,8 @@
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/005.jpg)
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/006.jpg)
 
+##
+
 #### Linguagens aprendidas
 
 ##### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
@@ -53,6 +52,8 @@
 ### 2.3 Git e Github
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/007.jpg)
+
+##
 
 #### Tecnologias aprendidas
 
