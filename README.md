@@ -1,14 +1,16 @@
 ### 📊 Trilhas de Aprendizado Concluídas
 
-## 1. Trilha Socioemocional de Produtividade
+## 1. Trilha socioemocional de produtividade
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/000.jpg)
 
-### Habilidades Socioemocionais Desenvolvidas
+##
+
+### Habilidades socioemocionais desenvolvidas
 
 #### <img align="center" alt="J-LinkedIn" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"> LinkedIn
 #### 🎯 Foco
-#### 📑 Hábitos
+#### 📑 Criação de hábitos
 #### 📖 Produtividade
 
 ## 2. Trilha Técnica de Iniciante em Programação
