@@ -6,12 +6,12 @@
 
 ##
 
-### Habilidades socioemocionais desenvolvidas
+### 👥Habilidades socioemocionais desenvolvidas
 
-#### <img align="center" alt="J-LinkedIn" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"> LinkedIn
-#### 🎯 Foco
-#### 📑 Criação de hábitos
-#### 📖 Produtividade
+#### • LinkedIn
+#### • Foco
+#### • Criação de hábitos
+#### • Produtividade
 
 ## 2. Trilha técnica de iniciante em programação
 
