@@ -14,50 +14,52 @@
     <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
 </head>
 <body>
-<header class="header">
+    <header class="header">
 
-    <h1 class="logo"><img src="./assets/logo.svg" alt="Logo da Alura"> Good Lock - Criptografia e Descriptografia </h1>
+        <section>
+            <h1 class="logo"><img src="./assets/logo.svg" alt="Logo da Alura"> Good Lock - Criptografia e Descriptografia </h1>
+        </section>
 
-</header>
+    </header>
 
-<main>
+    <main>
 
-<div class="textos">
+        <div class="textos">
 
-    <section class="area_entrada_texto">
-        <textarea maxlength="742" id="texto_entrada" class="entrada_texto">Digite seu texto</textarea>
-        <label class="aviso_texto_entrada"> Apenas letras minúsculas e sem acento </label>
-    </section>
+            <section class="area_entrada_texto">
+                <textarea maxlength="742" id="texto_entrada" class="entrada_texto">Digite seu texto</textarea>
+                <label class="aviso_texto_entrada"> Apenas letras minúsculas e sem acento </label>
+            </section>
 
-    <section class="area_texto_saida">
-        <textarea maxlength="742" id="texto_saida" class="saida_texto"></textarea>
-        <button id="texto_copiar" class="copiar_texto"></button>
+            <section class="area_texto_saida">
+                <textarea maxlength="742" id="texto_saida" class="saida_texto"></textarea>
+                <button id="texto_copiar" class="copiar_texto"></button>
 
-        <div id="texto_aviso_saida" class="aviso_texto_saida">
+                <div id="texto_aviso_saida" class="aviso_texto_saida">
 
-            <img src="./assets/background_image.svg" alt="Imagem de Fundo">
-            <h2> Nenhuma mensagem encontrada </h2>
-            <p> Digite um texto que você deseja criptografar ou descriptografar </p>
+                    <img src="./assets/background_image.svg" alt="Imagem de Fundo">
+                    <h2> Nenhuma mensagem encontrada </h2>
+                    <p> Digite um texto que você deseja criptografar ou descriptografar </p>
+
+                </div>
+            </section>
 
         </div>
-    </section>
 
-</div>
+    </main>
 
-</main>
+    <footer class="footer">
 
-<footer class="footer">
+        <section class="botoes">
+            <button id="texto_criptografia" class="botao_criptografar"> Criptografar </button>
+            <button id="texto_descriptografia" class="botao_descriptografar"> Descriptografar </button>
+        </section>
 
-<section class="botoes">
-    <button id="texto_criptografia" class="botao_criptografar"> Criptografar </button>
-    <button id="texto_descriptografia" class="botao_descriptografar"> Descriptografar </button>
-</section>
+        <section class="copyright">
+            <p>&copy; Good Lock - Desenvolvido por Jhonatha Camargo </p>
+        </section>
 
-<div class="copyright">
-    <p>&copy; Good Lock - Desenvolvido por Jhonatha Camargo </p>
-</div>
-
-</footer>
+    </footer>
 </body>
 <script src="./index.js"></script>
 <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>

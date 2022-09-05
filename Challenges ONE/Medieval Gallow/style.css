@@ -1,0 +1,17 @@
+body {
+    font-family: 'MedievalSharp', cursive;
+    background-image: url("./assets/background_image.jpg");
+    background-size: cover;
+}
+
+.header {
+    border: 1px solid red;
+}
+
+.main {
+    border: 1px solid red;
+}
+
+.footer {
+    border: 1px solid red;
+}

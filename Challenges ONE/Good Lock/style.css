@@ -194,8 +194,7 @@ body {
     width: 100%;
     margin: 0 -1em;
     position: relative;
-    bottom: -1em;
-    border-top: 2px solid #191970;
+    bottom: -1.11em;
 }
 
 @media screen and (max-width: 480px) {
@@ -207,7 +206,7 @@ body {
         margin: 8em 0.5em 0.5em 1em;
     }
     .copyright {
-        bottom: -67em;
+        bottom: -67.2em;
         width: 60em;
     }
 }
