@@ -17,53 +17,65 @@
     <header class="header">
 
         <section>
-            <h1 class="logo"><img src="./assets/logo.png" alt="Logo de uma Forca"> Medieval Gallow </h1>
+            <h1 class="titulo"><img class="logo" src="./assets/logo.png" alt="Logo de uma Forca"><div class="medievalgallow"> Lost Medieval Gallow </div></h1>
+            <p class="regras">
+                • Sem letras minúsculas<br>
+                • Sem letras com acentos<br>
+                • Sem caracteres especiais<br>
+            </p>
         </section>
 
     </header>
 
     <main>
 
-        <div class="pagina_inicial">
+        <div id="inicial_pagina" class="pagina_inicial">
 
             <section class="botoes_inicial">
-                <!---->
+                <button id="jogo_botao" class="botao_inicial"> Iniciar jogo </button>
+                <button id="palavra_botao" class="botao_inicial"> Adicionar nova palavra </button>
             </section>
 
         </div>
 
-        <div class="pagina_palavra">
+        <div id="palavra_pagina" class="pagina_palavra">
 
             <section class="texto_palavra">
-                <!---->
+                <textarea maxlength="10" class="caixa_texto_palavra">Digite sua palavra secreta!</textarea>
+                <p class="regras_palavra">
+                    • Máximo de 10 letras<br>
+                    • Máximo de 10 palavras por sessão
+                </p>
             </section>
 
             <section class="botoes_palavra">
-                <!---->
+                <button id="salvar_botao" class="botao_palavra">  Salvar e começar </button>
+                <button id="cancelar_botao" class="botao_palavra">  Cancelar </button>
             </section>
 
         </div>
 
-        <div class="pagina_forca">
+        <div id="forca_pagina" class="pagina_forca">
 
             <section class="forca">
-                <!---->
+                <canvas class="forca_desenho"></canvas>
             </section>
 
             <section class="palavra_forca">
 
                 <div class="letras_certas">
-                    <!---->
                 </div>
 
+                <canvas class="letras_certas_desenho"></canvas>
+
                 <div class="letras_erradas">
-                    <!---->
                 </div>
 
             </section>
 
             <section class="botoes_forca">
-                <!---->
+                <button id="novo_jogo_botao" class="botao_forca"> Novo jogo </button>
+                <button id="desistir_botao" class="botao_forca"> Desistir </button>
             </section>
 
         </div>

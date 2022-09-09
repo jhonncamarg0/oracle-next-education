@@ -8,13 +8,19 @@ body {
     padding: 0.5em 0 0.5em 0.5em;
 }
 
-.logo {
+.titulo {
     width: 50em;
     margin: 0.5em;
     padding: 0.5em;
 }
 
-.logo:after {
+.goodlock {
+    position: absolute;
+    top: 2.5em;
+    left: 8em;
+}
+
+.goodlock:after {
     content: "📘";
 }
 
