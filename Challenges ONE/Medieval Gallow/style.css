@@ -299,3 +299,74 @@ body {
     font-size: 1.1em;
     opacity: 80%;
 }
+
+@media screen and (max-width: 480px) {
+
+    .pagina_inicial {
+        padding: 9.24em 0.5em;   
+    }
+
+    .botoes_inicial {
+        margin: 0 2.4em 0 2.4em;
+    }
+
+    .pagina_palavra {
+        padding: 6.75em 0.5em;
+    }
+
+    .shield {
+        top: 19em;
+        left: 3.3em;
+    }
+
+    .texto_palavra {
+        margin: 0 1.8em 0 1.8em;
+    }
+
+    .botoes_palavra {
+        margin: 1em 1.8em 0 1.8em;
+    }
+
+    .pagina_forca {
+        padding: 1em 0.5em;
+    }
+
+    .forca {
+        width: 25.2em;
+    }
+
+    .desenho_forca {
+        display: block;
+    }
+
+    .letras_certas {
+        width: 8.4em;
+        margin: 0;
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .desenho_letras_certas {
+        display: block;
+        position: static;
+        margin: 0.2em 0 0 0;
+    }
+
+    .letras_erradas {
+        display: block;
+        width: 16em;
+        margin: 0;
+        position: static;
+        font-size: 1.5em;
+        margin: 0.1em 0 0 0;
+    }
+
+    .botoes_forca {
+        margin: 0.4em 0 0.4em 0;
+        width: 24.4em;
+    }
+
+    .copyright {
+        width: 23.5em;
+    }
+}
