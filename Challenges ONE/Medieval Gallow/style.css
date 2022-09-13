@@ -39,7 +39,50 @@ body {
     border-radius: 0.5em;
     vertical-align: top;
     font-size: 1.1em;
-    margin: 0.6em 0 0 0.5em;
+    margin: 0.6em 0.5em 0 0.5em;
+}
+
+.audio {
+    vertical-align: top;
+    margin: 0.8em 0 0 0.5em;
+    display: inline-block;
+    background: lightslategray;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.play_audio {
+    position: block;
+    background: whitesmoke;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 1s background;
+}
+
+.play_audio:hover {
+    background: goldenrod;
+}
+
+.play_audio:active {
+    background: darkslategray;
+}
+
+.pause_audio {
+    position: block;
+    background: whitesmoke;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 1s background;
+}
+
+.pause_audio:hover {
+    background: goldenrod;
+}
+
+.pause_audio:active {
+    background: darkslategray;
 }
 
 .pagina_inicial {
@@ -82,6 +125,13 @@ body {
     padding: 8.55em 0.5em;
 }
 
+.shield {
+    position: absolute;
+    top: 10em;
+    left: 31.4em;
+    width: 20em;
+}
+
 .texto_palavra {
     background: lightslategray;
     padding: 0.5em;
@@ -97,15 +147,20 @@ body {
     overflow: hidden;
     width: 90%;
     padding: 0.5em;
-    color: goldenrod;
+    color: whitesmoke;
     background: none;
     font-size: 1.5em;
     font-weight: bold;
     border-radius: 0.5em;
+    text-align: center;
 }
 
 .caixa_texto_palavra:focus {
     outline: none;
+}
+
+.caixa_texto_palavra::placeholder {
+    color: lightsteelblue;
 }
 
 .regras_palavra {
@@ -149,32 +204,67 @@ body {
 }
 
 .pagina_forca {
-    padding: 2.56em 0.5em;
+    padding: 0 0.5em;
 }
 
 .forca {
     padding: 0.5em;
-    background: lightslategray;
-    width: 20em;
-    margin: 0 auto;
+    background: url(./assets/map.jpg);
+    background-size: cover;
+    border: 2px solid lightslategray;
+    width: 79.4em;
     border-radius: 0.5em;
     opacity: 90%;
 }
 
-.palavra_forca {
-    padding: 0.5em;
-    background: lightslategray;
-    margin: 0.5em auto 0 auto;
-    width: 20em;
+.desenho_forca {
+    background: darkslategray;
     border-radius: 0.5em;
+    display: inline-block;
+}
+
+.letras_certas {
+    background: whitesmoke;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 2em;
+    width: 8.4em;
+    margin: 0 0.2em 0 0.2em;
+    display: inline-block;
+    vertical-align: top;
     opacity: 90%;
+}
+
+.desenho_letras_certas {
+    background: whitesmoke;
+    border-radius: 0.5em;
+    display: inline-block;
+    position: absolute;
+    top: 13.4em;
+    left: 26.8em;
+}
+
+.letras_erradas {
+    background: darkslategray;
+    border-radius: 0.5em;
+    display: inline-block;
+    padding: 0.5em;
+    width: 16em;
+    margin: 0 0.2em 0 0.2em;
+    font-weight: bold;
+    font-size: 2em;
+    opacity: 90%;
+    position: absolute;
+    top: 15em;
+    left: 13.2em;
 }
 
 .botoes_forca {
     padding: 0.5em;
     background: lightslategray;
-    margin: 0.5em auto 0 auto;
-    width: 17.7em;
+    margin: 0.4em 0 0.4em 0;
+    width: 24.4em;
     border-radius: 0.5em;
     opacity: 90%;
 }
@@ -187,7 +277,7 @@ body {
     border-radius: 0.5em;
     font-weight: bold;
     cursor: pointer;
-    width: 10em;
+    width: 14em;
     transition: 1s background;
     text-align: center;
     margin: auto 0.2em;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
 </head>
@@ -23,6 +24,12 @@
                 • Sem letras com acentos<br>
                 • Sem caracteres especiais
             </p>
+
+            <div class="audio">
+                <a id="audio_play" class="play_audio"><i class="ion-ios-play"></i></a>
+                <a id="audio_pause" class="pause_audio"><i class="ion-ios-pause"></i></a>
+            </div>
+
         </section>
 
     </header>
@@ -39,9 +46,10 @@
         </div>
 
         <div id="palavra_pagina" class="pagina_palavra">
+            <img class="shield" src="./assets/shield.png">
 
             <section class="texto_palavra">
-                <textarea maxlength="10" class="caixa_texto_palavra">Palavra...</textarea>
+                <textarea id="texto_palavra_caixa" class="caixa_texto_palavra" maxlength="10" placeholder="Palavra..."></textarea>
                 <p class="regras_palavra">
                     • Máximo de 10 letras<br>
                     • Máximo de 10 palavras por sessão
@@ -58,17 +66,16 @@
         <div id="forca_pagina" class="pagina_forca">
 
             <section class="forca">
-                <canvas class="forca_desenho"></canvas>
-            </section>
-
-            <section class="palavra_forca">
-
+                <canvas id="forca_desenho" class="desenho_forca" width="400" height="400"></canvas>     
+           
                 <div class="letras_certas">
+                    A B C D E F G H I J
                 </div>
 
-                <canvas class="letras_certas_desenho"></canvas>
+                <canvas class="desenho_letras_certas" width="300" height="50"></canvas>
 
                 <div class="letras_erradas">
+                    A - B - C - D - E - F - G - H - I - J
                 </div>
 
             </section>
@@ -89,6 +96,8 @@
         </section>
 
     </footer>
+
+    <audio id="audio"><source src="./assets/background_music.mp3" type="audio/mpeg"></audio>
 </body>
 <script src="./index.js"></script>
 <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
