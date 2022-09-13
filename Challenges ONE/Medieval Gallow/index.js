@@ -1,6 +1,6 @@
-document.getElementById("inicial_pagina").style.display = "none";
+document.getElementById("inicial_pagina").style.display = "block";
 document.getElementById("palavra_pagina").style.display = "none";
-document.getElementById("forca_pagina").style.display = "block";
+document.getElementById("forca_pagina").style.display = "none";
 
 var botao_jogo = document.getElementById("jogo_botao");
 var botao_palavra = document.getElementById("palavra_botao");
