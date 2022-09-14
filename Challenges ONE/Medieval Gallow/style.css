@@ -233,7 +233,7 @@ body {
 
 .forca {
     padding: 0.5em;
-    background: url(./assets/map.jpg);
+    background: url(./assets/library.jpg);
     background-size: cover;
     border: 2px solid lightslategray;
     width: 79.4em;
@@ -253,7 +253,7 @@ body {
     padding: 0.5em;
     font-weight: bold;
     font-size: 2em;
-    width: 8.4em;
+    width: 16.5em;
     margin: 0 0.2em 0 0.2em;
     display: inline-block;
     vertical-align: top;
