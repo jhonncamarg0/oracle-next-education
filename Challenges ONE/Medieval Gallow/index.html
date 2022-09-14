@@ -20,8 +20,8 @@
         <section>
             <h1 class="titulo"><img class="logo" src="./assets/logo.png" alt="Logo de uma Forca"><div class="medievalgallow"> Lost Medieval Gallow </div></h1>
             <p class="regras">
-                • Sem letras minúsculas<br>
                 • Sem letras com acentos<br>
+                • Sem números<br>
                 • Sem caracteres especiais
             </p>
 
@@ -39,8 +39,8 @@
         <div id="inicial_pagina" class="pagina_inicial">
 
             <section class="botoes_inicial">
-                <button id="jogo_botao" class="botao_inicial"> Jogo Rápido </button>
-                <button id="palavra_botao" class="botao_inicial"> Adicionar palavra no inventário </button>
+                <button id="jogo_botao" class="botao_inicial"> Partida rápida </button><i class="info"> ℹ️ <span class="span"> Partida rápida: jogue com uma palavra aleatória do sistema </span></i>
+                <button id="palavra_botao" class="botao_inicial"> Partida personalizada </button><i class="info"> ℹ️ <span class="span"> Partida personalizada: jogue com sua própria palavra, adicionando ela no inventário de palavras </span></i>
             </section>
 
         </div>
@@ -51,13 +51,13 @@
             <section class="texto_palavra">
                 <textarea id="texto_palavra_caixa" class="caixa_texto_palavra" maxlength="10" placeholder="Palavra..."></textarea>
                 <p class="regras_palavra">
-                    • Máximo de 10 letras<br>
+                    • Máximo de 10 e mínimo de 4 letras<br>
                     • Máximo de 10 palavras por sessão
                 </p>
             </section>
 
             <section class="botoes_palavra">
-                <button id="salvar_botao" class="botao_palavra">  Adicionar e jogar </button>
+                <button id="salvar_botao" class="botao_palavra"> Adicionar e jogar </input>
                 <button id="cancelar_botao" class="botao_palavra">  Cancelar </button>
             </section>
 
@@ -72,7 +72,7 @@
                     A B C D E F G H I J
                 </div>
 
-                <canvas class="desenho_letras_certas" width="300" height="50"></canvas>
+                <canvas id="letras_certas_desenho" class="desenho_letras_certas" width="300" height="50"></canvas>
 
                 <div class="letras_erradas">
                     A - B - C - D - E - F - G - H - I - J
@@ -81,7 +81,7 @@
             </section>
 
             <section class="botoes_forca">
-                <button id="novo_jogo_botao" class="botao_forca"> Reiniciar </button>
+                <button id="reiniciar_botao" class="botao_forca"> Reiniciar </button>
                 <button id="desistir_botao" class="botao_forca"> Abandonar </button>
             </section>
 

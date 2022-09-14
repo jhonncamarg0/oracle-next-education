@@ -61,7 +61,7 @@ body {
 }
 
 .play_audio:hover {
-    background: goldenrod;
+    background: lightsteelblue;
 }
 
 .play_audio:active {
@@ -86,7 +86,7 @@ body {
 }
 
 .pagina_inicial {
-    padding: 11.05em 0.5em;
+    padding: 10.64em 0.5em;
 }
 
 .botoes_inicial {
@@ -107,6 +107,7 @@ body {
     border-radius: 0.5em;
     display: block;
     font-weight: bold;
+    display: inline-block;
     cursor: pointer;
     width: 20em;
     margin: 1em auto;
@@ -121,8 +122,31 @@ body {
     background: darkslategray;
 }
 
+.info {
+    display: inline-block;
+    background: whitesmoke;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    border-radius: 1em;
+    margin: 0 0 0 0.5em;
+    cursor: pointer;
+}
+
+.info .span {
+    display: none;
+    background: whitesmoke;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-size: 1.1em;
+    width: 28em;
+}
+
+.info:hover .span {
+    display: inline-block;
+    position: absolute;
+}
+
 .pagina_palavra {
-    padding: 8.55em 0.5em;
+    padding: 8.57em 0.5em;
 }
 
 .shield {
@@ -204,7 +228,7 @@ body {
 }
 
 .pagina_forca {
-    padding: 0 0.5em;
+    padding: 0.02em 0.5em;
 }
 
 .forca {
@@ -303,11 +327,22 @@ body {
 @media screen and (max-width: 480px) {
 
     .pagina_inicial {
-        padding: 9.24em 0.5em;   
+        padding: 8.82em 0.5em;   
     }
 
     .botoes_inicial {
         margin: 0 2.4em 0 2.4em;
+    }
+
+    .info .span {
+        width: 18em;
+    }
+
+    .info:hover .span {
+        display: block;
+        position: absolute;
+        top: 33em;
+        left: 2.6em;
     }
 
     .pagina_palavra {
@@ -328,7 +363,7 @@ body {
     }
 
     .pagina_forca {
-        padding: 1em 0.5em;
+        padding: 1.15em 0.5em;
     }
 
     .forca {
@@ -337,6 +372,7 @@ body {
 
     .desenho_forca {
         display: block;
+        width: 25.48em;
     }
 
     .letras_certas {
@@ -344,12 +380,13 @@ body {
         margin: 0;
         display: block;
         font-size: 1.5em;
+        margin: 0.2em 0 0 0;
     }
 
     .desenho_letras_certas {
         display: block;
         position: static;
-        margin: 0.2em 0 0 0;
+        margin: 0.4em 0 0 0;
     }
 
     .letras_erradas {
@@ -358,7 +395,7 @@ body {
         margin: 0;
         position: static;
         font-size: 1.5em;
-        margin: 0.1em 0 0 0;
+        margin: 0.2em 0 0 0;
     }
 
     .botoes_forca {
