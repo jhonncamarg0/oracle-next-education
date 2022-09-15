@@ -6,13 +6,13 @@ let play_audio = document.getElementById("audio_play");
 let pause_audio = document.getElementById("audio_pause");
 pause_audio.style.display = "none";
 
-function play_page_audio () {
+function play_page_audio() {
     audio.play();
     play_audio.style.display = "none";
     pause_audio.style.display = "block";
 }
 
-function pause_page_audio () {
+function pause_page_audio() {
     audio.pause();
     pause_audio.style.display = "none";
     play_audio.style.display = "block";
@@ -30,9 +30,13 @@ let botao_desistir = document.getElementById("desistir_botao");
 
 var partida_rapida = true;
 let palavras = [];
+let letras_certas = [];
+let letras_erradas = [];
+var acertos = 0;
+var erros = 0;
 
-botao_jogo.onclick = function () {
-    if (palavras.length == 0){
+botao_jogo.onclick = function() {
+    if (palavras.length == 0) {
         Swal.fire({
             title: "Inventário de palavras vazio",
             text: "Comece jogando uma partida personalizada",
@@ -40,7 +44,7 @@ botao_jogo.onclick = function () {
             confirmButtonText: "Fechar"
         });
     }
-    else if (palavras.length >= 1){
+    else if (palavras.length >= 1) {
         document.getElementById("inicial_pagina").style.display = "none";
         document.getElementById("forca_pagina").style.display = "block";
         Swal.fire({
@@ -57,15 +61,13 @@ botao_jogo.onclick = function () {
             estrutura_forca.fillRect(10, 10, 170, 20);
             estrutura_forca.fillRect(180, 10, 20, 80);
         }
-
         forca_inicial();
-
-        var palavra_rapida = "";
-        
-        function tracinhos () {
+        let palavra_aleatoria = Math.floor(Math.random() * palavras.length);
+        var palavra_rapida = palavras(palavra_aleatoria);
+        function tracinhos_rapidos() {
             if(partida_rapida == true) {
                 var x = 0;
-                for (i = 0; i <= palavra_rapida.length; i++){
+                for (i = 0; i < palavra_rapida.length; i++) {
                     let tracinhos = document.getElementById("letras_certas_desenho");
                     let estrutura_tracinhos = tracinhos.getContext("2d");
                     estrutura_tracinhos.fillRect(10 + x, 10, 40, 10);
@@ -73,21 +75,91 @@ botao_jogo.onclick = function () {
                 }
             }
         }
-
-        tracinhos();
-
-        /* partida rápida */
-
+        tracinhos_rapidos();
+        function forca_tentativa() {
+            let forca_tentativa = document.getElementById("forca_desenho");
+            let forca_tentativa_estrutura = forca_tentativa.getContext("2d");
+            if (erros == 1) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.beginPath();
+                forca_tentativa_estrutura.arc(190, 118, 30, 0, 2 * Math.PI);
+                forca_tentativa_estrutura.fill();
+            }
+            else if (erros == 2) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.fillRect(160, 150, 60, 120);
+            }
+            else if (erros == 3) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.fillRect(138, 150, 20, 100);
+            }
+            else if (erros == 4) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.fillRect(222, 150, 20, 100);
+            }
+            else if (erros == 5) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.fillRect(160, 272, 29, 100);
+            }
+            else if (erros == 6) {
+                forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                forca_tentativa_estrutura.fillRect(191, 272, 29, 100);
+            }
+        }
+        function tentativa (evento) {
+            if (partida_rapida == false) {
+                let tecla = evento.key;
+                let palavra_rapida = palavras[palavras.length - 1];
+                let palavra_rapida_min = palavra_rapida.toLowerCase();
+                let letras_rapidas = palavra_rapida_min.split("");
+                if (letras_rapidas.includes(tecla) == true) {
+                    let letra_rapida = tecla.toUpperCase();
+                    if (letras_certas.includes(letra_rapida) == false) {
+                        letras_certas.push(letra_rapida);
+                        let desenho_letra_certa = document.getElementById("certas_letras");
+                        desenho_letra_certa.innerText = letras_certas;
+                        acertos ++;
+                        if (acertos == palavra_rapida.length) {
+                            Swal.fire({
+                                title: "Você ganhou!",
+                                text: "",
+                                icon: "success",
+                                confirmButtonText: "Fechar"
+                            });
+                        }
+                    }
+                }
+                else if (letras_rapidas.includes(tecla) == false) {
+                    let letra_rapida = tecla.toUpperCase();
+                    if (letras_erradas.includes(letra_rapida) == false) {
+                        letras_erradas.push(letra_rapida);
+                        let desenho_letra_errada = document.getElementById("erradas_letras");
+                        desenho_letra_errada.innerText = letras_erradas;
+                        erros ++;
+                        forca_tentativa();
+                        if (erros == palavra_rapida.length) {
+                            Swal.fire({
+                                title: "Você perdeu!",
+                                text: "",
+                                icon: "error",
+                                confirmButtonText: "Fechar"
+                            });
+                        }
+                    }
+                }
+            }
+        }
+        document.onkeydown = tentativa;
     }
 }
 
-botao_palavra.onclick = function () {
+botao_palavra.onclick = function() {
     document.getElementById("inicial_pagina").style.display = "none";
     document.getElementById("palavra_pagina").style.display = "block";
     document.getElementById("texto_palavra_caixa").focus();
 }
 
-botao_salvar.onclick = function () {
+botao_salvar.onclick = function() {
     let palavra_nova = document.getElementById("texto_palavra_caixa").value;
     if (palavra_nova.length == 0) {
         Swal.fire({
@@ -146,7 +218,6 @@ botao_salvar.onclick = function () {
                     icon: "success",
                     confirmButtonText: "Jogar"
                 });
-
                 function forca_inicial() {
                     let forca = document.getElementById("forca_desenho");
                     let estrutura_forca = forca.getContext("2d");
@@ -155,14 +226,12 @@ botao_salvar.onclick = function () {
                     estrutura_forca.fillRect(10, 10, 170, 20);
                     estrutura_forca.fillRect(180, 10, 20, 80);
                 }
-
                 forca_inicial();
-                
-                function tracinhos () {
+                function tracinhos_personalizados() {
                     if (partida_rapida == false) {
-                        let palavra_personalizada = palavras.pop();
+                        let palavra_personalizada = palavras[palavras.length - 1];
                         var x = 0;
-                        for (i = 0; i <= palavra_personalizada.length; i++){
+                        for (i = 0; i < palavra_personalizada.length; i++){
                             let tracinhos = document.getElementById("letras_certas_desenho");
                             let estrutura_tracinhos = tracinhos.getContext("2d");
                             estrutura_tracinhos.fillRect(10 + x, 20, 40, 10);
@@ -170,114 +239,99 @@ botao_salvar.onclick = function () {
                         }
                     }
                 }
-
-                tracinhos();
-
-                /* partida personalizada */
-
+                tracinhos_personalizados();
+                function forca_tentativa() {
+                    let forca_tentativa = document.getElementById("forca_desenho");
+                    let forca_tentativa_estrutura = forca_tentativa.getContext("2d");
+                    if (erros == 1) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.beginPath();
+                        forca_tentativa_estrutura.arc(190, 118, 30, 0, 2 * Math.PI);
+                        forca_tentativa_estrutura.fill();
+                    }
+                    else if (erros == 2) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.fillRect(160, 150, 60, 120);
+                    }
+                    else if (erros == 3) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.fillRect(138, 150, 20, 100);
+                    }
+                    else if (erros == 4) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.fillRect(222, 150, 20, 100);
+                    }
+                    else if (erros == 5) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.fillRect(160, 272, 29, 100);
+                    }
+                    else if (erros == 6) {
+                        forca_tentativa_estrutura.fillStyle = "whitesmoke";
+                        forca_tentativa_estrutura.fillRect(191, 272, 29, 100);
+                    }
+                }
+                function tentativa (evento) {
+                    if (partida_rapida == false) {
+                        let tecla = evento.key;
+                        let palavra_personalizada = palavras[palavras.length - 1];
+                        let palavra_personalizada_min = palavra_personalizada.toLowerCase();
+                        let letras_personalizadas = palavra_personalizada_min.split("");
+                        if (letras_personalizadas.includes(tecla) == true) {
+                            let letra_personalizada = tecla.toUpperCase();
+                            if (letras_certas.includes(letra_personalizada) == false) {
+                                letras_certas.push(letra_personalizada);
+                                let desenho_letra_certa = document.getElementById("certas_letras");
+                                desenho_letra_certa.innerText = letras_certas;
+                                acertos ++;
+                                if (acertos == palavra_personalizada.length) {
+                                    Swal.fire({
+                                        title: "Você ganhou!",
+                                        text: "",
+                                        icon: "success",
+                                        confirmButtonText: "Fechar"
+                                    });
+                                }
+                            }
+                        }
+                        else if (letras_personalizadas.includes(tecla) == false) {
+                            let letra_personalizada = tecla.toUpperCase();
+                            if (letras_erradas.includes(letra_personalizada) == false) {
+                                letras_erradas.push(letra_personalizada);
+                                let desenho_letra_errada = document.getElementById("erradas_letras");
+                                desenho_letra_errada.innerText = letras_erradas;
+                                erros ++;
+                                forca_tentativa();
+                                if (erros == palavra_personalizada.length) {
+                                    Swal.fire({
+                                        title: "Você perdeu!",
+                                        text: "",
+                                        icon: "error",
+                                        confirmButtonText: "Fechar"
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+                document.onkeydown = tentativa;
             }
         }
     }
 }
 
-botao_cancelar.onclick = function () {
+botao_cancelar.onclick = function() {
     let palavra_nova = document.getElementById("texto_palavra_caixa");
     palavra_nova.value = "";
     document.getElementById("palavra_pagina").style.display = "none";
     document.getElementById("inicial_pagina").style.display = "block";
 }
 
-botao_reiniciar.onclick = function () {
+botao_reiniciar.onclick = function() {
     /* reiniciar partida */
 }
 
-botao_desistir.onclick = function () {
+botao_desistir.onclick = function() {
     /* desistir da partida */
     document.getElementById("forca_pagina").style.display = "none";
     document.getElementById("inicial_pagina").style.display = "block";
 }
-
-/*
-
-var erros = 0;
-
-function forca_tentativa () {
-    let forca = document.getElementById("forca_desenho");
-    let estrutura_forca = forca.getContext("2d");
-    if (erros == 1) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.beginPath();
-        estrutura_forca.arc(190, 118, 30, 0, 2 * Math.PI);
-        estrutura_forca.fill();
-    }
-    else if (erros == 2) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.fillRect(160, 150, 60, 120);
-    }
-    else if (erros == 3) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.fillRect(138, 150, 20, 100);
-    }
-    else if (erros == 4) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.fillRect(222, 150, 20, 100);
-    }
-    else if (erros == 5) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.fillRect(160, 272, 29, 100);
-    }
-    else if (erros == 6) {
-        estrutura_forca.fillStyle = "whitesmoke";
-        estrutura_forca.fillRect(191, 272, 29, 100);
-        Swal.fire({
-            title: "Você perdeu a partida",
-            text: "Tente na próxima vez",
-            icon: "error",
-            confirmButtonText: "Fechar"
-        });
-    }
-}
-
-function tentativa (evento) {
-    if (partida_rapida == true) {
-        let tecla = evento.key;
-        let palavra_rapida_min = palavra_rapida.toLowerCase();
-        for (i = 0; i <= palavra_rapida.length; i ++){
-            if (tecla == palavra_rapida_min.charAt(i)) {
-                let letra = palavra_rapida.charAt(i);
-                let desenho_letra = document.getElementById("certas_letras");
-                desenho_letra.innerText = letra;
-            }
-            else if (tecla != palavra_rapida_min.charAt(i)) {
-                let letra = palavra_rapida.charAt(i);
-                let desenho_letra = document.getElementById("erradas_letras");
-                desenho_letra.innerText = letra;
-                erros ++;
-                forca_tentativa();
-            }
-        }
-    }
-    else if (partida_rapida == false) {
-        let tecla = evento.key;
-        let palavra_personalizada = palavras.pop();
-        let palavra_personalizada_min = palavra_personalizada.toLowerCase();
-        for (i = 0; i <= palavra_personalizada.length; i ++){
-            if (tecla == palavra_personalizada_min.charAt(i)) {
-                let letra = palavra_personalizada.charAt(i);
-                let desenho_letra = document.getElementById("certas_letras");
-                desenho_letra.innerText = letra;
-            }
-            else if (tecla != palavra_personalizada_min.charAt(i)) {
-                let letra = palavra_personalizada.charAt(i);
-                let desenho_letra = document.getElementById("erradas_letras");
-                desenho_letra.innerText = letra;
-                erros ++;
-                forca_tentativa();
-            }
-        }
-    }
-}
-
-document.onkeydown = tentativa;
-
-*/

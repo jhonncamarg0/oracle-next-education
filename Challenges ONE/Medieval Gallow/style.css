@@ -17,7 +17,7 @@ body {
     border-radius: 0.5em;
     font-weight: bold;
     font-size: 1.2em;
-    opacity: 90%;
+    opacity: 80%;
     display: inline-block;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .regras {
     background: whitesmoke;
-    opacity: 90%;
+    opacity: 80%;
     display: inline-block;
     padding: 0.5em 4em 0.5em 0.5em;
     border-radius: 0.5em;
@@ -96,7 +96,7 @@ body {
     text-align: center;
     background: lightslategray;
     border-radius: 0.5em;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .botao_inicial {
@@ -162,7 +162,7 @@ body {
     margin: 0 auto;
     width: 21em;
     border-radius: 0.5em;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .caixa_texto_palavra {
@@ -202,7 +202,7 @@ body {
     margin: 1em auto 0 auto;
     text-align: center;
     border-radius: 0.5em;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .botao_palavra {
@@ -238,7 +238,7 @@ body {
     border: 2px solid lightslategray;
     width: 79.4em;
     border-radius: 0.5em;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .desenho_forca {
@@ -257,7 +257,7 @@ body {
     margin: 0 0.2em 0 0.2em;
     display: inline-block;
     vertical-align: top;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .desenho_letras_certas {
@@ -278,7 +278,7 @@ body {
     margin: 0 0.2em 0 0.2em;
     font-weight: bold;
     font-size: 2em;
-    opacity: 90%;
+    opacity: 80%;
     position: absolute;
     top: 15em;
     left: 13.2em;
@@ -290,7 +290,7 @@ body {
     margin: 0.4em 0 0.4em 0;
     width: 24.4em;
     border-radius: 0.5em;
-    opacity: 90%;
+    opacity: 80%;
 }
 
 .botao_forca {
