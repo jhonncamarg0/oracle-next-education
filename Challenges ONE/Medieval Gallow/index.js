@@ -29,6 +29,7 @@ let botao_reiniciar = document.getElementById("reiniciar_botao");
 let botao_desistir = document.getElementById("desistir_botao");
 
 var partida = 0;
+var reboot = 0;
 let palavras = [];
 let letras_certas = [];
 let letras_erradas = [];
@@ -96,6 +97,27 @@ botao_jogo.onclick = function() {
                 forca_tentativa_estrutura.beginPath();
                 forca_tentativa_estrutura.arc(190, 118, 30, 0, 2 * Math.PI);
                 forca_tentativa_estrutura.fill();
+
+                forca_tentativa_estrutura.fillStyle = "black";
+                forca_tentativa_estrutura.beginPath();
+                forca_tentativa_estrutura.moveTo(190, 118);
+                forca_tentativa_estrutura.arc(175, 110, 4, 0, 2 * Math.PI);
+                forca_tentativa_estrutura.closePath();
+                forca_tentativa_estrutura.fill();
+
+                forca_tentativa_estrutura.beginPath();
+                forca_tentativa_estrutura.moveTo(190, 118);
+                forca_tentativa_estrutura.arc(205, 110, 4, 0, 2 * Math.PI);
+                forca_tentativa_estrutura.closePath();
+                forca_tentativa_estrutura.fill();
+
+                forca_tentativa_estrutura.strokeStyle = "black";
+                forca_tentativa_estrutura.beginPath();
+                forca_tentativa_estrutura.moveTo(190, 128);
+                forca_tentativa_estrutura.arc(190, 120, 20, 0, Math.PI);
+                forca_tentativa_estrutura.stroke();
+                forca_tentativa_estrutura.closePath();
+                forca_tentativa_estrutura.fill();
             }
             else if (erros == 2) {
                 forca_tentativa_estrutura.fillStyle = "whitesmoke";
@@ -141,7 +163,7 @@ botao_jogo.onclick = function() {
                                 if (acertos == palavra_rapida.length) {
                                     Swal.fire({
                                         title: "Você ganhou!",
-                                        text: "",
+                                        text: "Parabéns! Reinicie sua partida ou tente jogar com palavras mais difíceis",
                                         icon: "success",
                                         confirmButtonText: "Fechar"
                                     });
@@ -162,18 +184,18 @@ botao_jogo.onclick = function() {
                                 forca_tentativa();
                                 let onclick = new Audio("./assets/noscore.wav");
                                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                /*
-                                if (erros == palavra_rapida.length) {
+                                if (erros == 6) {
+                                    reboot = partida;
+                                    partida = 0;
                                     Swal.fire({
                                         title: "Você perdeu!",
-                                        text: "",
+                                        text: "Reinicie sua partida para jogar novamente",
                                         icon: "error",
                                         confirmButtonText: "Fechar"
                                     });
+                                    let onclick = new Audio("./assets/lose.wav");
+                                    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                 }
-                                let onclick = new Audio("./assets/lose.wav");
-                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                */
                             }
                         }
                     }
@@ -302,6 +324,27 @@ botao_salvar.onclick = function() {
                         forca_tentativa_estrutura.beginPath();
                         forca_tentativa_estrutura.arc(190, 118, 30, 0, 2 * Math.PI);
                         forca_tentativa_estrutura.fill();
+
+                        forca_tentativa_estrutura.fillStyle = "black";
+                        forca_tentativa_estrutura.beginPath();
+                        forca_tentativa_estrutura.moveTo(190, 118);
+                        forca_tentativa_estrutura.arc(175, 110, 4, 0, 2 * Math.PI);
+                        forca_tentativa_estrutura.closePath();
+                        forca_tentativa_estrutura.fill();
+        
+                        forca_tentativa_estrutura.beginPath();
+                        forca_tentativa_estrutura.moveTo(190, 118);
+                        forca_tentativa_estrutura.arc(205, 110, 4, 0, 2 * Math.PI);
+                        forca_tentativa_estrutura.closePath();
+                        forca_tentativa_estrutura.fill();
+        
+                        forca_tentativa_estrutura.strokeStyle = "black";
+                        forca_tentativa_estrutura.beginPath();
+                        forca_tentativa_estrutura.moveTo(190, 128);
+                        forca_tentativa_estrutura.arc(190, 120, 20, 0, Math.PI);
+                        forca_tentativa_estrutura.stroke();
+                        forca_tentativa_estrutura.closePath();
+                        forca_tentativa_estrutura.fill();
                     }
                     else if (erros == 2) {
                         forca_tentativa_estrutura.fillStyle = "whitesmoke";
@@ -368,8 +411,9 @@ botao_salvar.onclick = function() {
                                         forca_tentativa();
                                         let onclick = new Audio("./assets/noscore.wav");
                                         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                        /*
-                                        if (erros == palavra_personalizada.length) {
+                                        if (erros == 6) {
+                                            reboot = partida;
+                                            partida = 0;
                                             Swal.fire({
                                                 title: "Você perdeu!",
                                                 text: "Reinicie sua partida para jogar novamente",
@@ -379,7 +423,6 @@ botao_salvar.onclick = function() {
                                             let onclick = new Audio("./assets/lose.wav");
                                             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
-                                        */
                                     }
                                 }
                             }
@@ -477,7 +520,8 @@ botao_reiniciar.onclick = function() {
     letras_erradas = [];
     acertos = 0;
     erros = 0;
-    if (partida == 1) {
+    if (reboot == 1) {
+        partida = 1;
         reiniciar_partida1();
         Swal.fire({
             title: "Partida rápida reiniciada",
@@ -488,7 +532,8 @@ botao_reiniciar.onclick = function() {
         let onclick = new Audio("./assets/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
-    if (partida == 2) {
+    if (reboot == 2) {
+        partida = 2;
         reiniciar_partida2();
         Swal.fire({
             title: "Partida personalizada reiniciada",
