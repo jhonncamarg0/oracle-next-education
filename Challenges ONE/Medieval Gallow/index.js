@@ -157,7 +157,7 @@ botao_jogo.onclick = function() {
                             if (letras_erradas.includes(letra_rapida) == false) {
                                 letras_erradas.push(letra_rapida);
                                 let desenho_letra_errada = document.getElementById("erradas_letras");
-                                desenho_letra_errada.innerText = letras_erradas;
+                                desenho_letra_errada.innerText = letras_erradas.join(" ");
                                 erros ++;
                                 forca_tentativa();
                                 let onclick = new Audio("./assets/noscore.wav");
@@ -363,7 +363,7 @@ botao_salvar.onclick = function() {
                                     if (letras_erradas.includes(letra_personalizada) == false) {
                                         letras_erradas.push(letra_personalizada);
                                         let desenho_letra_errada = document.getElementById("erradas_letras");
-                                        desenho_letra_errada.innerText = letras_erradas;
+                                        desenho_letra_errada.innerText = letras_erradas.join(" ");
                                         erros ++;
                                         forca_tentativa();
                                         let onclick = new Audio("./assets/noscore.wav");
