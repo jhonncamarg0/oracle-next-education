@@ -1,6 +1,5 @@
-document.getElementById("inicial_pagina").style.display = "none";
 document.getElementById("palavra_pagina").style.display = "none";
-document.getElementById("forca_pagina").style.display = "display";
+document.getElementById("forca_pagina").style.display = "none";
 
 let audio = document.getElementById("audio");
 let play_audio = document.getElementById("audio_play");
@@ -44,6 +43,8 @@ botao_jogo.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
+        let onclick = new Audio("./assets/notification.wav");
+        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavras.length >= 1) {
         document.getElementById("inicial_pagina").style.display = "none";
@@ -54,6 +55,8 @@ botao_jogo.onclick = function() {
             icon: "success",
             confirmButtonText: "Jogar"
         });
+        let onclick = new Audio("./assets/notification.wav");
+        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         function forca_inicial() {
             let forca = document.getElementById("forca_desenho");
             let estrutura_forca = forca.getContext("2d");
@@ -71,7 +74,7 @@ botao_jogo.onclick = function() {
         }
         forca_inicial();
         let palavra_aleatoria = Math.floor(Math.random() * palavras.length);
-        var palavra_rapida = palavras(palavra_aleatoria);
+        var palavra_rapida = palavras[palavra_aleatoria];
         function tracinhos_rapidos() {
             if(partida_rapida == true) {
                 var x = 0;
@@ -131,6 +134,9 @@ botao_jogo.onclick = function() {
                                 let desenho_letra_certa = document.getElementById("certas_letras");
                                 desenho_letra_certa.innerText = letras_certas.join(" ");
                                 acertos ++;
+                                let onclick = new Audio("./assets/score.wav");
+                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                /*
                                 if (acertos == palavra_rapida.length) {
                                     Swal.fire({
                                         title: "Você ganhou!",
@@ -138,18 +144,25 @@ botao_jogo.onclick = function() {
                                         icon: "success",
                                         confirmButtonText: "Fechar"
                                     });
+                                    let onclick = new Audio("./assets/win.wav");
+                                    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                    
                                 }
+                                */
                             }
                         }
-                        else if (letras_personalizadas.includes(tecla) == false) {
-                            let letra_personalizada = tecla.toUpperCase();
-                            if (letras_erradas.includes(letra_personalizada) == false) {
-                                letras_erradas.push(letra_personalizada);
+                        else if (letras_rapidas.includes(tecla) == false) {
+                            let letra_rapida = tecla.toUpperCase();
+                            if (letras_erradas.includes(letra_rapida) == false) {
+                                letras_erradas.push(letra_rapida);
                                 let desenho_letra_errada = document.getElementById("erradas_letras");
                                 desenho_letra_errada.innerText = letras_erradas;
                                 erros ++;
                                 forca_tentativa();
-                                if (erros == palavra_personalizada.length) {
+                                let onclick = new Audio("./assets/noscore.wav");
+                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                /*
+                                if (erros == palavra_rapida.length) {
                                     Swal.fire({
                                         title: "Você perdeu!",
                                         text: "",
@@ -157,6 +170,9 @@ botao_jogo.onclick = function() {
                                         confirmButtonText: "Fechar"
                                     });
                                 }
+                                let onclick = new Audio("./assets/lose.wav");
+                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                */
                             }
                         }
                     }
@@ -171,6 +187,8 @@ botao_palavra.onclick = function() {
     document.getElementById("inicial_pagina").style.display = "none";
     document.getElementById("palavra_pagina").style.display = "block";
     document.getElementById("texto_palavra_caixa").focus();
+    let onclick = new Audio("./assets/onclick.wav");
+    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
 
 botao_salvar.onclick = function() {
@@ -182,6 +200,8 @@ botao_salvar.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
+        let onclick = new Audio("./assets/notification.wav");
+        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavra_nova.length <= 3) {
         Swal.fire({
@@ -190,6 +210,8 @@ botao_salvar.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
+        let onclick = new Audio("./assets/notification.wav");
+        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavra_nova.length >= 4) {
         let regex_a = /\W|_/;
@@ -202,6 +224,8 @@ botao_salvar.onclick = function() {
                 icon: "info",
                 confirmButtonText: "Fechar"
             });
+            let onclick = new Audio("./assets/notification.wav");
+            onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         }
         else if (regex_b.test(palavra_nova)) {
             Swal.fire({
@@ -210,6 +234,8 @@ botao_salvar.onclick = function() {
                 icon: "info",
                 confirmButtonText: "Fechar"
             });
+            let onclick = new Audio("./assets/notification.wav");
+            onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         }
         else if (regex_c.test(palavra_nova)) {
             if (palavras.length == 10) {
@@ -219,6 +245,8 @@ botao_salvar.onclick = function() {
                     icon: "info",
                     confirmButtonText: "Fechar"
                 });
+                let onclick = new Audio("./assets/notification.wav");
+                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
             }
             else if (palavras.length <= 9) {
                 let palavra_nova_max = palavra_nova.toUpperCase();
@@ -232,6 +260,8 @@ botao_salvar.onclick = function() {
                     icon: "success",
                     confirmButtonText: "Jogar"
                 });
+                let onclick = new Audio("./assets/notification.wav");
+                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                 function forca_inicial() {
                     let forca = document.getElementById("forca_desenho");
                     let estrutura_forca = forca.getContext("2d");
@@ -309,6 +339,9 @@ botao_salvar.onclick = function() {
                                         let desenho_letra_certa = document.getElementById("certas_letras");
                                         desenho_letra_certa.innerText = letras_certas.join(" ");
                                         acertos ++;
+                                        let onclick = new Audio("./assets/score.wav");
+                                        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                        /*
                                         if (acertos == palavra_personalizada.length) {
                                             Swal.fire({
                                                 title: "Você ganhou!",
@@ -316,7 +349,10 @@ botao_salvar.onclick = function() {
                                                 icon: "success",
                                                 confirmButtonText: "Fechar"
                                             });
+                                            let onclick = new Audio("./assets/win.wav");
+                                            onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
+                                        */
                                     }
                                 }
                                 else if (letras_personalizadas.includes(tecla) == false) {
@@ -327,6 +363,9 @@ botao_salvar.onclick = function() {
                                         desenho_letra_errada.innerText = letras_erradas;
                                         erros ++;
                                         forca_tentativa();
+                                        let onclick = new Audio("./assets/noscore.wav");
+                                        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                        /*
                                         if (erros == palavra_personalizada.length) {
                                             Swal.fire({
                                                 title: "Você perdeu!",
@@ -334,7 +373,10 @@ botao_salvar.onclick = function() {
                                                 icon: "error",
                                                 confirmButtonText: "Fechar"
                                             });
+                                            let onclick = new Audio("./assets/lose.wav");
+                                            onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
+                                        */
                                     }
                                 }
                             }
@@ -352,14 +394,20 @@ botao_cancelar.onclick = function() {
     palavra_nova.value = "";
     document.getElementById("palavra_pagina").style.display = "none";
     document.getElementById("inicial_pagina").style.display = "block";
+    let onclick = new Audio("./assets/onclick.wav");
+    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
 
 botao_reiniciar.onclick = function() {
     /* reiniciar partida */
+    let onclick = new Audio("./assets/notification.wav");
+    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
 
 botao_desistir.onclick = function() {
     /* desistir da partida */
     document.getElementById("forca_pagina").style.display = "none";
     document.getElementById("inicial_pagina").style.display = "block";
+    let onclick = new Audio("./assets/onclick.wav");
+    onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
