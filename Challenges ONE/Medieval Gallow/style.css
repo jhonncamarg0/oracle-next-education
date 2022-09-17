@@ -146,7 +146,7 @@ body {
 }
 
 .pagina_palavra {
-    padding: 8.57em 0.5em;
+    padding: 9.392em 0.5em;
 }
 
 .shield {
@@ -166,14 +166,12 @@ body {
 }
 
 .caixa_texto_palavra {
-    resize: none;
     border: none;
-    overflow: hidden;
     width: 90%;
     padding: 0.5em;
     color: whitesmoke;
     background: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     border-radius: 0.5em;
     text-align: center;
@@ -346,7 +344,7 @@ body {
     }
 
     .pagina_palavra {
-        padding: 6.75em 0.5em;
+        padding: 7.58em 0.5em;
     }
 
     .shield {
@@ -363,7 +361,7 @@ body {
     }
 
     .pagina_forca {
-        padding: 1.15em 0.5em;
+        padding: 1em 0.5em;
     }
 
     .forca {
@@ -384,6 +382,7 @@ body {
     }
 
     .desenho_letras_certas {
+        width: 25.48em;
         display: block;
         position: static;
         margin: 0.4em 0 0 0;
