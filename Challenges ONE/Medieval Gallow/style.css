@@ -108,6 +108,7 @@ body {
     display: block;
     font-weight: bold;
     display: inline-block;
+    box-shadow: 1px 1px darkslategray;
     cursor: pointer;
     width: 20em;
     margin: 1em auto;
@@ -210,6 +211,7 @@ body {
     border: none;
     border-radius: 0.5em;
     font-weight: bold;
+    box-shadow: 1px 1px darkslategray;
     cursor: pointer;
     width: 12em;
     transition: 1s background;
@@ -231,8 +233,11 @@ body {
 
 .forca {
     padding: 0.5em;
-    background: url(./assets/library.jpg);
-    background-size: cover;
+    background-color: lightslategray;
+    background-image: url(./assets/library.jpg);
+    background-size: 100% 80%;
+    background-position: bottom;
+    background-repeat: no-repeat;
     border: 2px solid lightslategray;
     width: 79.4em;
     border-radius: 0.5em;
@@ -246,7 +251,6 @@ body {
 }
 
 .letras_certas {
-    background: whitesmoke;
     border-radius: 0.5em;
     padding: 0.5em;
     font-weight: bold;
@@ -255,16 +259,14 @@ body {
     margin: 0 0.2em 0 0.2em;
     display: inline-block;
     vertical-align: top;
-    opacity: 80%;
 }
 
 .desenho_letras_certas {
-    background: whitesmoke;
     border-radius: 0.5em;
     display: inline-block;
     position: absolute;
-    top: 13.4em;
-    left: 26.8em;
+    top: 11em;
+    left: 26.6em;
 }
 
 .letras_erradas {
@@ -297,6 +299,7 @@ body {
     color: white;
     border: none;
     border-radius: 0.5em;
+    box-shadow: 1px 1px darkslategray;
     font-weight: bold;
     cursor: pointer;
     width: 14em;

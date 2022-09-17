@@ -1,5 +1,6 @@
+document.getElementById("inicial_pagina").style.display = "none";
 document.getElementById("palavra_pagina").style.display = "none";
-document.getElementById("forca_pagina").style.display = "none";
+document.getElementById("forca_pagina").style.display = "display";
 
 let audio = document.getElementById("audio");
 let play_audio = document.getElementById("audio_play");
@@ -77,8 +78,8 @@ botao_jogo.onclick = function() {
                 for (i = 0; i < palavra_rapida.length; i++) {
                     let tracinhos = document.getElementById("letras_certas_desenho");
                     let estrutura_tracinhos = tracinhos.getContext("2d");
-                    estrutura_tracinhos.fillRect(10 + x, 10, 40, 10);
-                    x = x + 50;
+                    estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
+                    x = x + 28;
                 }
             }
         }
@@ -128,7 +129,7 @@ botao_jogo.onclick = function() {
                             if (letras_certas.includes(letra_rapida) == false) {
                                 letras_certas.push(letra_rapida);
                                 let desenho_letra_certa = document.getElementById("certas_letras");
-                                desenho_letra_certa.innerText = letras_certas;
+                                desenho_letra_certa.innerText = letras_certas.join(" ");
                                 acertos ++;
                                 if (acertos == palavra_rapida.length) {
                                     Swal.fire({
@@ -254,8 +255,8 @@ botao_salvar.onclick = function() {
                         for (i = 0; i < palavra_personalizada.length; i++){
                             let tracinhos = document.getElementById("letras_certas_desenho");
                             let estrutura_tracinhos = tracinhos.getContext("2d");
-                            estrutura_tracinhos.fillRect(10 + x, 20, 40, 10);
-                            x = x + 50;
+                            estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
+                            x = x + 28;
                         }
                     }
                 }
@@ -306,7 +307,7 @@ botao_salvar.onclick = function() {
                                     if (letras_certas.includes(letra_personalizada) == false) {
                                         letras_certas.push(letra_personalizada);
                                         let desenho_letra_certa = document.getElementById("certas_letras");
-                                        desenho_letra_certa.innerText = letras_certas;
+                                        desenho_letra_certa.innerText = letras_certas.join(" ");
                                         acertos ++;
                                         if (acertos == palavra_personalizada.length) {
                                             Swal.fire({
