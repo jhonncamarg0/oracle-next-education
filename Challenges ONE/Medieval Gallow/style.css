@@ -319,10 +319,27 @@ body {
 .copyright {
     background: lightslategray;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.5em 0 0 0;
     font-weight: bold;
     font-size: 1.1em;
     opacity: 80%;
+}
+
+.social {
+    background: black;
+    opacity: 80%;
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 0 0.2em 0;
+}
+
+.linkedin {
+    width: 2em;
+    margin: 0 0.2em 0 0;
+}
+
+.github {
+    width: 2em;
+    margin: 0 0 0 0.2em;
 }
 
 @media screen and (max-width: 480px) {
@@ -406,6 +423,10 @@ body {
     }
 
     .copyright {
-        width: 23.5em;
+        width: 24.42em;
+    }
+
+    .social {
+        padding: 0.5em 0 0.4em 0;
     }
 }
