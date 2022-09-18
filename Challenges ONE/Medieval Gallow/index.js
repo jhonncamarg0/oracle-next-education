@@ -159,19 +159,18 @@ botao_jogo.onclick = function() {
                                 acertos ++;
                                 let onclick = new Audio("./assets/score.wav");
                                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                /*
                                 if (acertos == palavra_rapida.length) {
+                                    reboot = partida;
+                                    partida = 0;
                                     Swal.fire({
                                         title: "Você ganhou!",
                                         text: "Parabéns! Reinicie sua partida ou tente jogar com palavras mais difíceis",
                                         icon: "success",
                                         confirmButtonText: "Fechar"
                                     });
-                                    let onclick = new Audio("./assets/win.wav");
+                                    let onclick = new Audio("./assets/win.mp3");
                                     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                    
                                 }
-                                */
                             }
                         }
                         else if (letras_rapidas.includes(tecla) == false) {
@@ -387,18 +386,18 @@ botao_salvar.onclick = function() {
                                         acertos ++;
                                         let onclick = new Audio("./assets/score.wav");
                                         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
-                                        /*
                                         if (acertos == palavra_personalizada.length) {
+                                            reboot = partida;
+                                            partida = 0;
                                             Swal.fire({
                                                 title: "Você ganhou!",
                                                 text: "Parabéns! Reinicie sua partida ou tente jogar com palavras mais difíceis",
                                                 icon: "success",
                                                 confirmButtonText: "Fechar"
                                             });
-                                            let onclick = new Audio("./assets/win.wav");
+                                            let onclick = new Audio("./assets/win.mp3");
                                             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
-                                        */
                                     }
                                 }
                                 else if (letras_personalizadas.includes(tecla) == false) {
