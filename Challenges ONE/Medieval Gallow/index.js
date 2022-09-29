@@ -28,6 +28,8 @@ let botao_cancelar = document.getElementById("cancelar_botao");
 let botao_reiniciar = document.getElementById("reiniciar_botao");
 let botao_desistir = document.getElementById("desistir_botao");
 
+let campos = ["certa_letra1", "certa_letra2", "certa_letra3", "certa_letra4", "certa_letra5",
+"certa_letra6", "certa_letra7", "certa_letra8", "certa_letra9", "certa_letra10"];
 var partida = 0;
 var reboot = 0;
 let palavras = [];
@@ -83,8 +85,8 @@ botao_jogo.onclick = function() {
                 for (i = 0; i < palavra_rapida.length; i++) {
                     let tracinhos = document.getElementById("letras_certas_desenho");
                     let estrutura_tracinhos = tracinhos.getContext("2d");
-                    estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
-                    x = x + 28;
+                    estrutura_tracinhos.fillRect(10 + x, 20, 30, 10);
+                    x = x + 40;
                 }
             }
         }
@@ -140,6 +142,7 @@ botao_jogo.onclick = function() {
                 forca_tentativa_estrutura.fillRect(191, 280, 29, 100);
             }
         }
+        reboot = partida;
         function tentativa (evento) {
             if (partida == 1) {
                 let codigo = evento.keyCode;
@@ -153,14 +156,113 @@ botao_jogo.onclick = function() {
                         if (letras_rapidas.includes(tecla) == true) {
                             let letra_rapida = tecla.toUpperCase();
                             if (letras_certas.includes(letra_rapida) == false) {
-                                letras_certas.push(letra_rapida);
-                                let desenho_letra_certa = document.getElementById("certas_letras");
-                                desenho_letra_certa.innerText = letras_certas.join(" ");
-                                acertos ++;
-                                let onclick = new Audio("./assets/score.wav");
-                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                function ponto(id, contador_letra) {
+                                    if (typeof letras_certas[contador_letra] != "undefined") {
+                                        let desenho_letra_certa = document.getElementById(id[contador_letra]);
+                                        desenho_letra_certa.innerText = letras_certas[contador_letra];
+                                        acertos ++;
+                                        let onclick = new Audio("./assets/score.wav");
+                                        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                    }
+                                }
+                                function scan(id , letra) {
+                                    if (letras_certas.includes(letra) == true) {
+                                        for (i = 0; i <= letras_rapidas.length; i++) {
+                                            let tecla_min = letra.toLowerCase();
+                                            if (letras_rapidas[i] == tecla_min && letras_certas[i] != letra) {
+                                                let desenho_letra_certa = document.getElementById(id[i]);
+                                                letras_certas[i] = letra;
+                                                desenho_letra_certa.innerText = letras_certas[i];
+                                                acertos ++;
+                                            }
+                                        }
+                                    }
+                                }
+                                for (i = 0; i <= letras_rapidas.length; i++) {
+                                    let a = 1;
+                                    let b = 5;
+                                    if (letras_rapidas[i] == tecla) {
+                                        if (typeof letras_certas[i] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i] = tecla_max;
+                                            ponto(campos, 0);
+                                            scan(campos, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + a] == tecla) {
+                                        if (typeof letras_certas[i + a] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + a] = tecla_max;
+                                            ponto(campos, 1);
+                                            scan(campos, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (a * 2)] == tecla) {
+                                        if (typeof letras_certas[i + (a * 2)] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (a * 2)] = tecla_max;
+                                            ponto(campos, 2);
+                                            scan(campos, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (a * 3)] == tecla) {
+                                        if (typeof letras_certas[i + (a * 3)] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (a * 3)] = tecla_max;
+                                            ponto(campos, 3);
+                                            scan(campos, 3, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (a * 4)] == tecla) {
+                                        if (typeof letras_certas[i + (a * 4)] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (a * 4)] = tecla_max;
+                                            ponto(campos, 4);
+                                            scan(campos, 4, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + b] == tecla) {
+                                        if (typeof letras_certas[i + b] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + b] = tecla_max;
+                                            ponto(campos, 5);
+                                            scan(campos, 5, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (b + a)] == tecla) {
+                                        if (typeof letras_certas[i + (b + a)] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (b + a)] = tecla_max;
+                                            ponto(campos, 6);
+                                            scan(campos, 6, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (b + (a * 2))] == tecla) {
+                                        if (typeof letras_certas[i + (b + (a * 2))] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (b + (a * 2))] = tecla_max;
+                                            ponto(campos, 7);
+                                            scan(campos, 7, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (b + (a * 3))] == tecla) {
+                                        if (typeof letras_certas[i + (b + (a * 3))] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (b + (a * 3))] = tecla_max;
+                                            ponto(campos, 8);
+                                            scan(campos, 8, tecla_max);
+                                        }
+                                    }
+                                    else if (letras_rapidas[i + (b + (a * 4))] == tecla) {
+                                        if (typeof letras_certas[i + (b + (a * 4))] == "undefined") {
+                                            let tecla_max = tecla.toUpperCase();
+                                            letras_certas[i + (b + (a * 4))] = tecla_max;
+                                            ponto(campos, 9);
+                                            scan(campos, 9, tecla_max);
+                                        }
+                                    }
+                                }
                                 if (acertos == palavra_rapida.length) {
-                                    reboot = partida;
                                     partida = 0;
                                     Swal.fire({
                                         title: "Você ganhou!",
@@ -184,7 +286,6 @@ botao_jogo.onclick = function() {
                                 let onclick = new Audio("./assets/noscore.wav");
                                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                 if (erros == 6) {
-                                    reboot = partida;
                                     partida = 0;
                                     Swal.fire({
                                         title: "Você perdeu!",
@@ -306,11 +407,11 @@ botao_salvar.onclick = function() {
                     if (partida == 2) {
                         let palavra_personalizada = palavras[palavras.length - 1];
                         var x = 0;
-                        for (i = 0; i < palavra_personalizada.length; i++){
+                        for (i = 0; i < palavra_personalizada.length; i++) {
                             let tracinhos = document.getElementById("letras_certas_desenho");
                             let estrutura_tracinhos = tracinhos.getContext("2d");
-                            estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
-                            x = x + 28;
+                            estrutura_tracinhos.fillRect(10 + x, 20, 30, 10);
+                            x = x + 40;
                         }
                     }
                 }
@@ -366,6 +467,7 @@ botao_salvar.onclick = function() {
                         forca_tentativa_estrutura.fillRect(191, 280, 29, 100);
                     }
                 }
+                reboot = partida;
                 function tentativa (evento) {
                     if (partida == 2) {
                         let codigo = evento.keyCode;
@@ -380,14 +482,113 @@ botao_salvar.onclick = function() {
                                 if (letras_personalizadas.includes(tecla) == true) {
                                     let letra_personalizada = tecla.toUpperCase();
                                     if (letras_certas.includes(letra_personalizada) == false) {
-                                        letras_certas.push(letra_personalizada);
-                                        let desenho_letra_certa = document.getElementById("certas_letras");
-                                        desenho_letra_certa.innerText = letras_certas.join(" ");
-                                        acertos ++;
-                                        let onclick = new Audio("./assets/score.wav");
-                                        onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                        function ponto(id, contador_letra) {
+                                            if (typeof letras_certas[contador_letra] != "undefined") {
+                                                let desenho_letra_certa = document.getElementById(id[contador_letra]);
+                                                desenho_letra_certa.innerText = letras_certas[contador_letra];
+                                                acertos ++;
+                                                let onclick = new Audio("./assets/score.wav");
+                                                onclick.addEventListener("canplaythrough", function() { onclick.play(); });
+                                            }
+                                        }
+                                        function scan(id , letra) {
+                                            if (letras_certas.includes(letra) == true) {
+                                                for (i = 0; i <= letras_personalizadas.length; i++) {
+                                                    let tecla_min = letra.toLowerCase();
+                                                    if (letras_personalizadas[i] == tecla_min && letras_certas[i] != letra) {
+                                                        let desenho_letra_certa = document.getElementById(id[i]);
+                                                        letras_certas[i] = letra;
+                                                        desenho_letra_certa.innerText = letras_certas[i];
+                                                        acertos ++;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        for (i = 0; i <= letras_personalizadas.length; i++) {
+                                            let a = 1;
+                                            let b = 5;
+                                            if (letras_personalizadas[i] == tecla) {
+                                                if (typeof letras_certas[i] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i] = tecla_max;
+                                                    ponto(campos, 0);
+                                                    scan(campos, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + a] == tecla) {
+                                                if (typeof letras_certas[i + a] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + a] = tecla_max;
+                                                    ponto(campos, 1);
+                                                    scan(campos, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (a * 2)] == tecla) {
+                                                if (typeof letras_certas[i + (a * 2)] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (a * 2)] = tecla_max;
+                                                    ponto(campos, 2);
+                                                    scan(campos, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (a * 3)] == tecla) {
+                                                if (typeof letras_certas[i + (a * 3)] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (a * 3)] = tecla_max;
+                                                    ponto(campos, 3);
+                                                    scan(campos, 3, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (a * 4)] == tecla) {
+                                                if (typeof letras_certas[i + (a * 4)] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (a * 4)] = tecla_max;
+                                                    ponto(campos, 4);
+                                                    scan(campos, 4, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + b] == tecla) {
+                                                if (typeof letras_certas[i + b] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + b] = tecla_max;
+                                                    ponto(campos, 5);
+                                                    scan(campos, 5, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (b + a)] == tecla) {
+                                                if (typeof letras_certas[i + (b + a)] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (b + a)] = tecla_max;
+                                                    ponto(campos, 6);
+                                                    scan(campos, 6, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (b + (a * 2))] == tecla) {
+                                                if (typeof letras_certas[i + (b + (a * 2))] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (b + (a * 2))] = tecla_max;
+                                                    ponto(campos, 7);
+                                                    scan(campos, 7, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (b + (a * 3))] == tecla) {
+                                                if (typeof letras_certas[i + (b + (a * 3))] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (b + (a * 3))] = tecla_max;
+                                                    ponto(campos, 8);
+                                                    scan(campos, 8, tecla_max);
+                                                }
+                                            }
+                                            else if (letras_personalizadas[i + (b + (a * 4))] == tecla) {
+                                                if (typeof letras_certas[i + (b + (a * 4))] == "undefined") {
+                                                    let tecla_max = tecla.toUpperCase();
+                                                    letras_certas[i + (b + (a * 4))] = tecla_max;
+                                                    ponto(campos, 9);
+                                                    scan(campos, 9, tecla_max);
+                                                }
+                                            }
+                                        }
                                         if (acertos == palavra_personalizada.length) {
-                                            reboot = partida;
                                             partida = 0;
                                             Swal.fire({
                                                 title: "Você ganhou!",
@@ -411,7 +612,6 @@ botao_salvar.onclick = function() {
                                         let onclick = new Audio("./assets/noscore.wav");
                                         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         if (erros == 6) {
-                                            reboot = partida;
                                             partida = 0;
                                             Swal.fire({
                                                 title: "Você perdeu!",
@@ -467,8 +667,8 @@ function reiniciar_partida1 () {
         for (i = 0; i < palavra_rapida.length; i++) {
             let tracinhos = document.getElementById("letras_certas_desenho");
             let estrutura_tracinhos = tracinhos.getContext("2d");
-            estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
-            x = x + 28;
+            estrutura_tracinhos.fillRect(10 + x, 20, 30, 10);
+            x = x + 40;
         }
     }
     tracinhos_rapidos();
@@ -494,11 +694,11 @@ function reiniciar_partida2 () {
     function tracinhos_personalizados() {
         let palavra_personalizada = palavras[palavras.length - 1];
         var x = 0;
-        for (i = 0; i < palavra_personalizada.length; i++){
+        for (i = 0; i < palavra_personalizada.length; i++) {
             let tracinhos = document.getElementById("letras_certas_desenho");
             let estrutura_tracinhos = tracinhos.getContext("2d");
-            estrutura_tracinhos.fillRect(20 + x, 20, 20, 10);
-            x = x + 28;
+            estrutura_tracinhos.fillRect(10 + x, 20, 30, 10);
+            x = x + 40;
         }
     }
     tracinhos_personalizados();
@@ -507,13 +707,15 @@ function reiniciar_partida2 () {
 botao_reiniciar.onclick = function() {
     let forca_tentativa = document.getElementById("forca_desenho");
     let forca_tentativa_estrutura = forca_tentativa.getContext("2d");
-    let desenho_letra_certa = document.getElementById("certas_letras");
+    forca_tentativa_estrutura.clearRect(0, 0, forca_tentativa.width, forca_tentativa.height);
     let tracinhos = document.getElementById("letras_certas_desenho");
     let estrutura_tracinhos = tracinhos.getContext("2d");
-    let desenho_letra_errada = document.getElementById("erradas_letras");
-    forca_tentativa_estrutura.clearRect(0, 0, forca_tentativa.width, forca_tentativa.height);
-    desenho_letra_certa.innerText = "";
     estrutura_tracinhos.clearRect(0, 0, tracinhos.width, tracinhos.height);
+    for (i = 0; i < campos.length; i++) {
+        let certa_letra = document.getElementById(campos[i]);
+        certa_letra.innerText = "";
+    }
+    let desenho_letra_errada = document.getElementById("erradas_letras");
     desenho_letra_errada.innerText = "";
     letras_certas = [];
     letras_erradas = [];
@@ -551,13 +753,15 @@ botao_desistir.onclick = function() {
     document.getElementById("inicial_pagina").style.display = "block";
     let forca_tentativa = document.getElementById("forca_desenho");
     let forca_tentativa_estrutura = forca_tentativa.getContext("2d");
-    let desenho_letra_certa = document.getElementById("certas_letras");
+    forca_tentativa_estrutura.clearRect(0, 0, forca_tentativa.width, forca_tentativa.height);
     let tracinhos = document.getElementById("letras_certas_desenho");
     let estrutura_tracinhos = tracinhos.getContext("2d");
-    let desenho_letra_errada = document.getElementById("erradas_letras");
-    forca_tentativa_estrutura.clearRect(0, 0, forca_tentativa.width, forca_tentativa.height);
-    desenho_letra_certa.innerText = "";
     estrutura_tracinhos.clearRect(0, 0, tracinhos.width, tracinhos.height);
+    for (i = 0; i < campos.length; i++) {
+        let certa_letra = document.getElementById(campos[i]);
+        certa_letra.innerText = "";
+    }
+    let desenho_letra_errada = document.getElementById("erradas_letras");
     desenho_letra_errada.innerText = "";
     letras_certas = [];
     letras_erradas = [];

@@ -250,13 +250,12 @@ body {
     display: inline-block;
 }
 
-.letras_certas {
+.letra_certa {
     border-radius: 0.5em;
-    padding: 0.5em;
+    padding: 0.2em;
     font-weight: bold;
     font-size: 2em;
-    width: 16.5em;
-    margin: 0 0.2em 0 0.2em;
+    margin: 0 0 0 0.26em;
     display: inline-block;
     vertical-align: top;
 }
@@ -270,7 +269,7 @@ body {
 }
 
 .letras_erradas {
-    background: darkslategray;
+    background: lightcoral;
     border-radius: 0.5em;
     display: inline-block;
     padding: 0.5em;
