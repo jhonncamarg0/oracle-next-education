@@ -153,7 +153,7 @@ body {
 .shield {
     position: absolute;
     top: 10em;
-    left: 31.4em;
+    left: 31em;
     width: 20em;
 }
 
@@ -367,7 +367,7 @@ body {
     }
 
     .shield {
-        top: 19em;
+        top: 18.3em;
         left: 3.3em;
     }
 
@@ -392,19 +392,16 @@ body {
         width: 25.48em;
     }
 
-    .letras_certas {
-        width: 8.4em;
-        margin: 0;
-        display: block;
+    .letra_certa {
         font-size: 1.5em;
-        margin: 0.2em 0 0 0;
+        margin: 0.6em 0 0 0.22em;
+        background: whitesmoke;
     }
 
     .desenho_letras_certas {
         width: 25.48em;
         display: block;
         position: static;
-        margin: 0.4em 0 0 0;
     }
 
     .letras_erradas {
@@ -418,7 +415,6 @@ body {
 
     .botoes_forca {
         margin: 0.4em 0 0.4em 0;
-        width: 24.4em;
     }
 
     .copyright {
