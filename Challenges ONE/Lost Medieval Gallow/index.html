@@ -1,106 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Medieval Gallow </title>
-    <link rel="icon" href="./assets/logo.png">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
-</head>
-<body>
-    <header class="header">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Medieval Gallow </title>
+        <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <section>
+                <h1 class="titulo"><a href="./index.html"><img class="logo" src="./assets/logo.png" alt="Logo de uma Forca"><div class="medievalgallow"></a> Lost Medieval Gallow </div></h1>
 
-        <section>
-            <h1 class="titulo"><a href="./index.html"><img class="logo" src="./assets/logo.png" alt="Logo de uma Forca"><div class="medievalgallow"></a> Lost Medieval Gallow </div></h1>
-            <p class="regras">
-                • Sem letras com acentos<br>
-                • Sem números<br>
-                • Sem caracteres especiais
-            </p>
-
-            <div class="audio">
-                <a id="audio_play" class="play_audio"><i class="ion-ios-play"></i></a>
-                <a id="audio_pause" class="pause_audio"><i class="ion-ios-pause"></i></a>
-            </div>
-
-        </section>
-
-    </header>
-
-    <main>
-
-        <div id="inicial_pagina" class="pagina_inicial">
-
-            <section class="botoes_inicial">
-                <button id="jogo_botao" class="botao_inicial"> Partida rápida </button><i class="info"> ℹ️ <span class="span"> Partida rápida: jogue com uma palavra aleatória do sistema </span></i>
-                <button id="palavra_botao" class="botao_inicial"> Partida personalizada </button><i class="info"> ℹ️ <span class="span"> Partida personalizada: jogue com sua própria palavra, adicionando ela no inventário de palavras </span></i>
-            </section>
-
-        </div>
-
-        <div id="palavra_pagina" class="pagina_palavra">
-            <img class="shield" src="./assets/shield.png">
-
-            <section class="texto_palavra">
-                <input id="texto_palavra_caixa" class="caixa_texto_palavra" maxlength="10" placeholder="Palavra..."></textarea>
-                <p class="regras_palavra">
-                    • Máximo de 10 e mínimo de 4 letras<br>
-                    • Máximo de 10 palavras por sessão
+                <p class="regras">
+                    • Sem letras com acentos<br>
+                    • Sem números<br>
+                    • Sem caracteres especiais
                 </p>
-            </section>
 
-            <section class="botoes_palavra">
-                <button id="salvar_botao" class="botao_palavra"> Adicionar e jogar </input>
-                <button id="cancelar_botao" class="botao_palavra">  Cancelar </button>
-            </section>
-
-        </div>
-
-        <div id="forca_pagina" class="pagina_forca">
-
-            <section class="forca">
-                <canvas id="forca_desenho" class="desenho_forca" width="400" height="400"></canvas>     
-
-                <div id="certa_letra1" class="letra_certa"></div><div id="certa_letra2" class="letra_certa"></div><div id="certa_letra3" class="letra_certa"></div><div id="certa_letra4" class="letra_certa"></div><div id="certa_letra5" class="letra_certa"></div><div id="certa_letra6" class="letra_certa"></div><div id="certa_letra7" class="letra_certa"></div><div id="certa_letra8" class="letra_certa"></div><div id="certa_letra9" class="letra_certa"></div><div id="certa_letra10" class="letra_certa"></div>
-
-                <canvas id="letras_certas_desenho" class="desenho_letras_certas" width="560" height="50"></canvas>
-
-                <div id="erradas_letras" class="letras_erradas">
+                <div class="audio">
+                    <a id="audio_play" class="play_audio"><i class="ion-ios-play"></i></a>
+                    <a id="audio_pause" class="pause_audio"><i class="ion-ios-pause"></i></a>
                 </div>
-
             </section>
-
-            <section class="botoes_forca">
-                <button id="reiniciar_botao" class="botao_forca"> Reiniciar </button>
-                <button id="desistir_botao" class="botao_forca"> Desistir </button>
-            </section>
-
-        </div>
-
-    </main>
-
-    <footer class="footer">
-
-        <section class="copyright">
-            <p>&copy; Lost Medieval Gallow - Criado por Jhonatha Camargo </p>
-
-            <div class="social">
-                <a href="https://linkedin.com/in/jhonatha-camargo"><img class="linkedin" src="./assets/linkedin.png"></a>
-                <a href="https://github.com/jhonncamarg0"><img class="github" src="./assets/github.png"></a>
+        </header>
+        <main>
+            <div id="inicial_pagina" class="pagina_inicial">
+                <section class="botoes_inicial">
+                    <button id="jogo_botao" class="botao_inicial"> Partida rápida </button><i class="info"> ℹ️ <span class="span"> Partida rápida: jogue com uma palavra aleatória do sistema </span></i>
+                    <button id="palavra_botao" class="botao_inicial"> Partida personalizada </button><i class="info"> ℹ️ <span class="span"> Partida personalizada: jogue com sua própria palavra, adicionando ela no inventário de palavras </span></i>
+                </section>
             </div>
-        </section>
 
-    </footer>
+            <div id="palavra_pagina" class="pagina_palavra">
+                <img class="shield" src="./assets/shield.png">
 
-    <audio id="audio"><source src="./assets/background_music.mp3" type="audio/mpeg"></audio>
-</body>
+                <section class="texto_palavra">
+                    <input id="texto_palavra_caixa" class="caixa_texto_palavra" maxlength="10" placeholder="Palavra..."></textarea>
+
+                    <p class="regras_palavra">
+                        • Máximo de 10 e mínimo de 4 letras<br>
+                        • Máximo de 10 palavras por sessão
+                    </p>
+                </section>
+
+                <section class="botoes_palavra">
+                    <button id="salvar_botao" class="botao_palavra"> Adicionar e jogar </input>
+                    <button id="cancelar_botao" class="botao_palavra">  Cancelar </button>
+                </section>
+            </div>
+
+            <div id="forca_pagina" class="pagina_forca">
+                <section class="forca">
+                    <canvas id="forca_desenho" class="desenho_forca" width="400" height="400"></canvas>     
+
+                    <div id="certa_letra1" class="letra_certa"></div><div id="certa_letra2" class="letra_certa"></div><div id="certa_letra3" class="letra_certa"></div><div id="certa_letra4" class="letra_certa"></div><div id="certa_letra5" class="letra_certa"></div><div id="certa_letra6" class="letra_certa"></div><div id="certa_letra7" class="letra_certa"></div><div id="certa_letra8" class="letra_certa"></div><div id="certa_letra9" class="letra_certa"></div><div id="certa_letra10" class="letra_certa"></div>
+
+                    <canvas id="letras_certas_desenho" class="desenho_letras_certas" width="560" height="50"></canvas>
+
+                    <div id="erradas_letras" class="letras_erradas">
+                    </div>
+                </section>
+
+                <section class="botoes_forca">
+                    <button id="reiniciar_botao" class="botao_forca"> Reiniciar </button>
+                    <button id="desistir_botao" class="botao_forca"> Desistir </button>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="copyright">
+                <p>&copy; Lost Medieval Gallow - Criado por Jhonatha Camargo </p>
+
+                <div class="social">
+                    <a href="https://linkedin.com/in/jhonatha-camargo"><img class="linkedin" src="./assets/linkedin.png"></a>
+                    <a href="https://github.com/jhonncamarg0"><img class="github" src="./assets/github.png"></a>
+                </div>
+            </section>
+        </footer>
+
+        <audio id="audio"><source src="./assets/background_music.mp3" type="audio/mpeg"></audio>
+    </body>
 <script src="./index.js"></script>
 <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="./node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
