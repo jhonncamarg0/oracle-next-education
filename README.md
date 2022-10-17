@@ -26,6 +26,10 @@
 
 ##
 
+#### Habilidades Técnicas Desenvolvidas
+
+##### • Lógica de Programação
+
 ### 2.2 HTML e CSS I, II, III e IV
 
 ![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/003.jpg)
