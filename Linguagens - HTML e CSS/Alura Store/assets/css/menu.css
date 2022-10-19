@@ -1,0 +1,8 @@
+.menu__link {
+    color: darkslategray;
+    padding: 0.5em;
+}
+
+.menu__link:hover {
+    border-bottom: 2px solid darkslateblue;
+}
