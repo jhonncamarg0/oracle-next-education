@@ -20,9 +20,6 @@
         "card-imagem"
         "card-principal";
     grid-template-columns: 100%;
-    grid-template-rows: 175px auto;
-    margin: 0 0.1em 0 0.1em;
-    width: calc(20% - 0.2em);
 }
 
 .populares__card___imagem {
