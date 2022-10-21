@@ -431,13 +431,13 @@ botao_salvar.onclick = function() {
                         forca_tentativa_estrutura.arc(175, 110, 4, 0, 2 * Math.PI);
                         forca_tentativa_estrutura.closePath();
                         forca_tentativa_estrutura.fill();
-        
+
                         forca_tentativa_estrutura.beginPath();
                         forca_tentativa_estrutura.moveTo(190, 118);
                         forca_tentativa_estrutura.arc(205, 110, 4, 0, 2 * Math.PI);
                         forca_tentativa_estrutura.closePath();
                         forca_tentativa_estrutura.fill();
-        
+
                         forca_tentativa_estrutura.strokeStyle = "black";
                         forca_tentativa_estrutura.beginPath();
                         forca_tentativa_estrutura.moveTo(190, 128);

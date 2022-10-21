@@ -83,7 +83,7 @@ body {
 }
 
 .conteudoPrincipal-cursos-link:nth-child(even) a:before {
-	background: url(../img/background1.svg) no-repeat;	
+	background: url(../img/background1.svg) no-repeat;
 }
 
 .conteudoPrincipal-cursos-link:nth-child(odd) a:before {
@@ -159,7 +159,7 @@ body {
 	background-color: #4DBA7A;
 	color: #FFF;
 	cursor: pointer;
-	
+
 }
 
 .rodapePrincipal-contatoForm-submit,
@@ -212,7 +212,7 @@ body {
 @media(min-width: 769px) {
 
 	.container {
-		width: 85%;	
+		width: 85%;
 	}
 
 	.subtitulo {

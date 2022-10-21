@@ -322,6 +322,7 @@ body {
     font-weight: bold;
     font-size: 1.1em;
     opacity: 80%;
+    width: 100%;
 }
 
 .social {
@@ -341,10 +342,10 @@ body {
     margin: 0 0 0 0.2em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 
     .pagina_inicial {
-        padding: 11.5em 0.5em;   
+        padding: 11.5em 0.5em;
     }
 
     .botoes_inicial {
@@ -358,7 +359,7 @@ body {
     .info:hover .span {
         display: block;
         position: absolute;
-        top: 33em;
+        top: 36.2em;
         left: 2.6em;
     }
 
@@ -418,7 +419,7 @@ body {
     }
 
     .copyright {
-        width: 24.42em;
+        width: 24.5em;
     }
 
     .social {

@@ -29,7 +29,7 @@ body {
     padding: 0.5em 0 0.5em 0.5em;
 }
 
-.area_entrada_texto {
+.area_texto_entrada {
     width: 50em;
     margin: 0.5em;
     padding: 0.5em;
@@ -204,15 +204,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
     .botoes {
         text-align: left;
     }
     .area_texto_saida {
-        margin: 8em 0.5em 0.5em 1em;
+        top: 46em;
+        margin: 0 0 0 1em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .area_texto_saida {
+        margin: -5em 0.5em 0.5em 0.5em;
+        padding: 0.5em 0.5em 35em 0.5em;
     }
     .copyright {
-        bottom: -84em;
-        width: 60em;
+        top: 50.6em;
+        width: 80em;
     }
 }
