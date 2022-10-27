@@ -4,3 +4,17 @@
     row-gap: 1rem;
     width: calc(33.33% - 1rem);
 }
+
+@media screen and (min-width: 0) {
+    .pessoa {
+        row-gap: 2rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pessoa {
+        row-gap: 1rem;
+        width: calc(33.33% - 1rem);
+    }
+}

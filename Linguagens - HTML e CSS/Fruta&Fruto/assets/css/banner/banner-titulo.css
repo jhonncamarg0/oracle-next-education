@@ -10,3 +10,17 @@
     transform: translate(-50%, -50%);
     width: 100%;
 }
+
+@media screen and (min-width: 0) {
+    .banner__titulo {
+        font-size: 3rem;
+        left: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__titulo {
+        font-size: 5rem;
+        left: 50%;
+    }
+}

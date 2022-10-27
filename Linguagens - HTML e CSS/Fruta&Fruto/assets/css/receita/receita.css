@@ -6,3 +6,21 @@
     flex-direction: column;
     width: calc(25% - 1rem);
 }
+
+@media screen and (min-width: 0) {
+    .receita {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .receita {
+        width: calc(33.33% - 1rem);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .receita {
+        width: calc(25% - 1rem);
+    }
+}

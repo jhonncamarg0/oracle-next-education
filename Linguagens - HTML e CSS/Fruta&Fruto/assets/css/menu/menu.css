@@ -5,3 +5,20 @@
     padding-right: 2rem;
     width: 25%;
 }
+
+@media screen and (min-width: 0) {
+    .menu {
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        border-radius: 5px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 25%;
+    }
+}
