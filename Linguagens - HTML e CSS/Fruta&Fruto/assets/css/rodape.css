@@ -1,0 +1,17 @@
+.rodape {
+    background: lightgray;
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    text-transform: lowercase;
+    width: calc(100% - 4rem);
+}
+
+.rodape__contato {
+    background: darkslategray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    text-align: center;
+}

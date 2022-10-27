@@ -1,3 +1,7 @@
 .menu {
+    background: whitesmoke;
+    border-radius: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 25%;
 }

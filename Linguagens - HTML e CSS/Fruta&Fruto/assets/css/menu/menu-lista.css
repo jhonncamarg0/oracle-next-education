@@ -1,5 +1,5 @@
-.menu_lista {
+.menu__lista {
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
 }

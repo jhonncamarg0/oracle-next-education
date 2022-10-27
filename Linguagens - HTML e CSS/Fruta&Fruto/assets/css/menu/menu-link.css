@@ -1,0 +1,21 @@
+.menu__link {
+    color: darkgray;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: all .1s ease-in-out;
+}
+
+.menu__link.ativo {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.menu__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu__link:active {
+    color: darkslategray;
+    font-weight: bold;
+}

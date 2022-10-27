@@ -1,0 +1,6 @@
+.pessoa {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: calc(33.33% - 1rem);
+}
