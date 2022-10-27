@@ -1,0 +1,14 @@
+.menu___link {
+    color: darkgray;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.menu___link.active {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.menu___link:hover {
+    text-decoration: underline;
+}
