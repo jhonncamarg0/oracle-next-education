@@ -21,6 +21,11 @@
     .receitas {
         column-gap: 1rem;
         flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .receitas {
         width: calc(100% - 4rem);
     }
 }

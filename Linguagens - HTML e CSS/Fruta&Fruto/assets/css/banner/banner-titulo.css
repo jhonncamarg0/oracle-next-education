@@ -20,6 +20,13 @@
 
 @media screen and (min-width: 768px) {
     .banner__titulo {
+        font-size: 4rem;
+        left: 55%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
         font-size: 5rem;
         left: 50%;
     }

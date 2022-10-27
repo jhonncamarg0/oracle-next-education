@@ -27,6 +27,11 @@
 @media screen and (min-width: 768px) {
     .rodape {
         justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .rodape {
         width: calc(100% - 4rem);
     }
 }
