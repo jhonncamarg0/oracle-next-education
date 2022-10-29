@@ -46,7 +46,7 @@ botao_jogo.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavras.length >= 1) {
@@ -59,7 +59,7 @@ botao_jogo.onclick = function() {
             icon: "success",
             confirmButtonText: "Jogar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         function forca_inicial() {
             let forca = document.getElementById("forca_desenho");
@@ -161,7 +161,7 @@ botao_jogo.onclick = function() {
                                         let desenho_letra_certa = document.getElementById(id[contador_letra]);
                                         desenho_letra_certa.innerText = letras_certas[contador_letra];
                                         acertos ++;
-                                        let onclick = new Audio("./assets/score.wav");
+                                        let onclick = new Audio("./assets/audio/score.wav");
                                         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                     }
                                 }
@@ -270,7 +270,7 @@ botao_jogo.onclick = function() {
                                         icon: "success",
                                         confirmButtonText: "Fechar"
                                     });
-                                    let onclick = new Audio("./assets/win.mp3");
+                                    let onclick = new Audio("./assets/audio/win.mp3");
                                     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                 }
                             }
@@ -283,7 +283,7 @@ botao_jogo.onclick = function() {
                                 desenho_letra_errada.innerText = letras_erradas.join(" ");
                                 erros ++;
                                 forca_tentativa();
-                                let onclick = new Audio("./assets/noscore.wav");
+                                let onclick = new Audio("./assets/audio/noscore.wav");
                                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                 if (erros == 6) {
                                     partida = 0;
@@ -293,7 +293,7 @@ botao_jogo.onclick = function() {
                                         icon: "error",
                                         confirmButtonText: "Fechar"
                                     });
-                                    let onclick = new Audio("./assets/lose.wav");
+                                    let onclick = new Audio("./assets/audio/lose.wav");
                                     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                 }
                             }
@@ -310,7 +310,7 @@ botao_palavra.onclick = function() {
     document.getElementById("inicial_pagina").style.display = "none";
     document.getElementById("palavra_pagina").style.display = "block";
     document.getElementById("texto_palavra_caixa").focus();
-    let onclick = new Audio("./assets/onclick.wav");
+    let onclick = new Audio("./assets/audio/onclick.wav");
     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
 
@@ -325,7 +325,7 @@ botao_salvar.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavra_nova.length <= 3) {
@@ -335,7 +335,7 @@ botao_salvar.onclick = function() {
             icon: "info",
             confirmButtonText: "Fechar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     else if (palavra_nova.length >= 4) {
@@ -349,7 +349,7 @@ botao_salvar.onclick = function() {
                 icon: "info",
                 confirmButtonText: "Fechar"
             });
-            let onclick = new Audio("./assets/notification.wav");
+            let onclick = new Audio("./assets/audio/notification.wav");
             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         }
         else if (regex_b.test(palavra_nova)) {
@@ -359,7 +359,7 @@ botao_salvar.onclick = function() {
                 icon: "info",
                 confirmButtonText: "Fechar"
             });
-            let onclick = new Audio("./assets/notification.wav");
+            let onclick = new Audio("./assets/audio/notification.wav");
             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
         }
         else if (regex_c.test(palavra_nova)) {
@@ -370,7 +370,7 @@ botao_salvar.onclick = function() {
                     icon: "info",
                     confirmButtonText: "Fechar"
                 });
-                let onclick = new Audio("./assets/notification.wav");
+                let onclick = new Audio("./assets/audio/notification.wav");
                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
             }
             else if (palavras.length <= 9) {
@@ -385,7 +385,7 @@ botao_salvar.onclick = function() {
                     icon: "success",
                     confirmButtonText: "Jogar"
                 });
-                let onclick = new Audio("./assets/notification.wav");
+                let onclick = new Audio("./assets/audio/notification.wav");
                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                 function forca_inicial() {
                     let forca = document.getElementById("forca_desenho");
@@ -487,7 +487,7 @@ botao_salvar.onclick = function() {
                                                 let desenho_letra_certa = document.getElementById(id[contador_letra]);
                                                 desenho_letra_certa.innerText = letras_certas[contador_letra];
                                                 acertos ++;
-                                                let onclick = new Audio("./assets/score.wav");
+                                                let onclick = new Audio("./assets/audio/score.wav");
                                                 onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                             }
                                         }
@@ -596,7 +596,7 @@ botao_salvar.onclick = function() {
                                                 icon: "success",
                                                 confirmButtonText: "Fechar"
                                             });
-                                            let onclick = new Audio("./assets/win.mp3");
+                                            let onclick = new Audio("./assets/audio/win.mp3");
                                             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
                                     }
@@ -609,7 +609,7 @@ botao_salvar.onclick = function() {
                                         desenho_letra_errada.innerText = letras_erradas.join(" ");
                                         erros ++;
                                         forca_tentativa();
-                                        let onclick = new Audio("./assets/noscore.wav");
+                                        let onclick = new Audio("./assets/audio/noscore.wav");
                                         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         if (erros == 6) {
                                             partida = 0;
@@ -619,7 +619,7 @@ botao_salvar.onclick = function() {
                                                 icon: "error",
                                                 confirmButtonText: "Fechar"
                                             });
-                                            let onclick = new Audio("./assets/lose.wav");
+                                            let onclick = new Audio("./assets/audio/lose.wav");
                                             onclick.addEventListener("canplaythrough", function() { onclick.play(); });
                                         }
                                     }
@@ -639,7 +639,7 @@ botao_cancelar.onclick = function() {
     palavra_nova.value = "";
     document.getElementById("palavra_pagina").style.display = "none";
     document.getElementById("inicial_pagina").style.display = "block";
-    let onclick = new Audio("./assets/onclick.wav");
+    let onclick = new Audio("./assets/audio/onclick.wav");
     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
 
@@ -730,7 +730,7 @@ botao_reiniciar.onclick = function() {
             icon: "success",
             confirmButtonText: "Jogar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
     if (reboot == 2) {
@@ -742,7 +742,7 @@ botao_reiniciar.onclick = function() {
             icon: "success",
             confirmButtonText: "Jogar"
         });
-        let onclick = new Audio("./assets/notification.wav");
+        let onclick = new Audio("./assets/audio/notification.wav");
         onclick.addEventListener("canplaythrough", function() { onclick.play(); });
     }
 }
@@ -767,6 +767,6 @@ botao_desistir.onclick = function() {
     letras_erradas = [];
     acertos = 0;
     erros = 0;
-    let onclick = new Audio("./assets/onclick.wav");
+    let onclick = new Audio("./assets/audio/onclick.wav");
     onclick.addEventListener("canplaythrough", function() { onclick.play(); });
 }
