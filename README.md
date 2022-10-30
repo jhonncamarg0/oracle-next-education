@@ -15,14 +15,14 @@
 
 ## 2. Trilha técnica de iniciante em programação
 
-![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/000.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/001.jpg)
 
 ##
 
 ### 💻 Habilidades técnicas desenvolvidas
 
-#### • <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Lógica de Programação
-#### • <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
-#### • <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS3
-#### • <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git
-#### • <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Lógica de Programação | https://cursos.alura.com.br/user/jhonncamarg0/course/logica-programacao-javascript-html/certificate | https://cursos.alura.com.br/user/jhonncamarg0/course/logica-programacao-pratica-com-desenho-animacoes-em-jogo/certificate
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS3
+#### <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git
+#### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
