@@ -22,7 +22,7 @@
 ### 💻 Habilidades técnicas desenvolvidas
 
 #### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Lógica de Programação | https://cursos.alura.com.br/user/jhonncamarg0/course/logica-programacao-javascript-html/certificate | https://cursos.alura.com.br/user/jhonncamarg0/course/logica-programacao-pratica-com-desenho-animacoes-em-jogo/certificate
-#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5
-#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS3
-#### <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git
-#### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML5 | https://cursos.alura.com.br/user/jhonncamarg0/course/html5-css3-primeiros-passos/certificate | https://cursos.alura.com.br/user/jhonncamarg0/course/html5-css3-posicionamento-listas-navegacao/certificate | https://cursos.alura.com.br/user/jhonncamarg0/course/html5-css3-formularios-tabelas/certificate
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS3 | https://cursos.alura.com.br/user/jhonncamarg0/course/html5-css3-avancando-css/certificate
+#### <img align="center" alt="J-Git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> Git | https://cursos.alura.com.br/user/jhonncamarg0/course/git-github-controle-de-versao/certificate
+#### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github | https://cursos.alura.com.br/user/jhonncamarg0/course/git-github-controle-de-versao/certificate
