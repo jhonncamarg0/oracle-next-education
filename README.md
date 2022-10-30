@@ -8,6 +8,8 @@
 
 ### 👥 Habilidades socioemocionais desenvolvidas
 
+##
+
 #### LinkedIn
 #### • https://cursos.alura.com.br/user/jhonncamarg0/course/linkedin-perfil-profissional/certificate
 
@@ -27,6 +29,8 @@
 ##
 
 ### 💻 Habilidades técnicas desenvolvidas
+
+##
 
 #### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Lógica de Programação
 #### • https://cursos.alura.com.br/user/jhonncamarg0/course/logica-programacao-javascript-html/certificate
