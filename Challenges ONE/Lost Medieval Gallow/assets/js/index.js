@@ -37,6 +37,7 @@ let letras_certas = [];
 let letras_erradas = [];
 var acertos = 0;
 var erros = 0;
+var palavra_rapida = "";
 
 botao_jogo.onclick = function() {
     if (palavras.length == 0) {
@@ -78,7 +79,7 @@ botao_jogo.onclick = function() {
         }
         forca_inicial();
         let palavra_aleatoria = Math.floor(Math.random() * palavras.length);
-        var palavra_rapida = palavras[palavra_aleatoria];
+        palavra_rapida = palavras[palavra_aleatoria];
         function tracinhos_rapidos() {
             if(partida == 1) {
                 var x = 0;
@@ -661,7 +662,7 @@ function reiniciar_partida1 () {
     }
     forca_inicial();
     let palavra_aleatoria = Math.floor(Math.random() * palavras.length);
-    var palavra_rapida = palavras[palavra_aleatoria];
+    palavra_rapida = palavras[palavra_aleatoria];
     function tracinhos_rapidos() {
         var x = 0;
         for (i = 0; i < palavra_rapida.length; i++) {
