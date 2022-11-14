@@ -1,4 +1,7 @@
 {
     "files.trimTrailingWhitespace": true,
-    "cSpell.language": "en,pt-BR,lorem"
+    "cSpell.language": "en,pt-BR,lorem",
+    "cSpell.ignoreWords": [
+        "tranferir"
+    ]
 }

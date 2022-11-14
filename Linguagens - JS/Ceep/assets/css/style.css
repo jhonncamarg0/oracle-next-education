@@ -1,0 +1,184 @@
+:root {
+    background: whitesmoke;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 2rem);
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.card {
+    align-items: center;
+    background: darkslategray;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 50%;
+}
+
+.card__div {
+    align-items: center;
+    background: lightslategrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    row-gap: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.card__title {
+    color: whitesmoke;
+    text-shadow: 3px 3px darkslategray;
+}
+
+.card__form {
+    display: flex;
+}
+
+.card__input {
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 0.5rem;
+}
+
+.card__input:hover {
+    border: none;
+}
+
+.card__input:focus {
+    outline: none;
+}
+
+.card__button {
+    background: slateblue;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-shadow: 1px 1px darkslategray;
+    transition: background 1s;
+}
+
+.card__button:hover {
+    background: darkslateblue;
+}
+
+.card__button:active {
+    background: darkslategray
+}
+
+.card__text {
+    color: white;
+}
+
+.card__text--strike {
+    color: white;
+    text-decoration: line-through;
+}
+
+.card__button--concluir {
+    background: greenyellow;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.2rem;
+    text-shadow: 1px 1px darkslategray;
+    transition: background 1s;
+}
+
+.card__button--concluir:hover {
+    background: green;
+}
+
+.card__button--concluir:active {
+    background: darkslategray;
+}
+
+.card__button--deletar {
+    background: red;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.2rem;
+    text-shadow: 1px 1px darkslategray;
+    transition: background 1s;
+}
+
+.card__button--deletar:hover {
+    background: darkred;
+}
+
+.card__button--deletar:active {
+    background: darkslategray;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 1rem;
+    width: 50%;
+}
+
+.card__item {
+    align-items: center;
+    background: darkslategray;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__div {
+    column-gap: 1rem;
+    display: flex;
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 0) {
+    .card {
+        width: calc(100% - 2rem);
+    }
+
+    .card__form {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .card__list {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 75%;
+    }
+
+    .card__form {
+        flex-direction: row;
+        row-gap: 0;
+    }
+
+    .card__list {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 50%;
+    }
+
+    .card__list {
+        width: 50%;
+    }
+}
