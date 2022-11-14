@@ -6,7 +6,7 @@ const criarItem = (evento) => {
     const inputValor = input.value;
     if(inputValor == "") {
         evento.preventDefault();
-        alert("Campo vazio!");
+        alert("⚠️ Campo vazio! / Empty field!");
     }
     else if(inputValor != "") {
         evento.preventDefault();

@@ -39,7 +39,8 @@
 
 .card__title {
     color: whitesmoke;
-    text-shadow: 3px 3px darkslategray;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px darkslategray;
 }
 
 .card__form {
@@ -156,9 +157,22 @@
         width: calc(100% - 2rem);
     }
 
+    .card__title {
+        font-size: 1.2rem;
+    }
+
     .card__form {
+        box-shadow: 0 0;
         flex-direction: column;
         row-gap: 1rem;
+    }
+
+    .card__input {
+        border-radius: 3px;
+    }
+
+    .card__button {
+        border-radius: 3px;
     }
 
     .card__list {
@@ -171,9 +185,21 @@
         width: 75%;
     }
 
+    .card__title {
+        font-size: 1.4rem;
+    }
+
     .card__form {
         flex-direction: row;
         row-gap: 0;
+    }
+
+    .card__input {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .card__button {
+        border-radius: 0 3px 3px 0;
     }
 
     .card__list {
@@ -184,6 +210,10 @@
 @media screen and (min-width: 1024px) {
     .card {
         width: 50%;
+    }
+
+    .card__title {
+        font-size: 1.6rem;
     }
 
     .card__list {
