@@ -1,9 +1,13 @@
 :root {
-    background: whitesmoke;
+    background: darkslategray;
 }
 
 .main {
     align-items: center;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 2rem);
@@ -15,7 +19,6 @@
     align-items: center;
     background: darkslategray;
     border-radius: 6px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +43,8 @@
 }
 
 .card__form {
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     display: flex;
 }
 
@@ -89,6 +94,7 @@
     background: greenyellow;
     border: none;
     border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     padding: 0.2rem;
     text-shadow: 1px 1px darkslategray;
@@ -107,6 +113,7 @@
     background: red;
     border: none;
     border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     padding: 0.2rem;
     text-shadow: 1px 1px darkslategray;
@@ -132,7 +139,8 @@
 .card__item {
     align-items: center;
     background: darkslategray;
-    border-radius: 3px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
 }
