@@ -43,6 +43,10 @@
     text-shadow: 2px 2px darkslategray;
 }
 
+.card__title:before {
+    content: "💡";
+}
+
 .card__form {
     border-radius: 6px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
