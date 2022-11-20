@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> PetShop | Cadastrar Perfil </title>
+        <link href="./assets/img/doguito.svg" rel="icon">
+        <link href="./assets/css/base/reset.css" rel="stylesheet">
+        <link href="./assets/css/base/variaveis.css" rel="stylesheet">
+        <link href="./assets/css/base/base.css" rel="stylesheet">
+        <link href="./assets/css/componentes/cabecalho.css" rel="stylesheet">
+        <link href="./assets/css/componentes/cartao.css" rel="stylesheet">
+        <link href="./assets/css/componentes/inputs.css" rel="stylesheet">
+        <link href="./assets/css/componentes/botao.css" rel="stylesheet">
+        <link href="./assets/css/cadastro.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="cabecalho container">
+            <img src="./assets/img/doguitoadm.svg" alt="Logo" class="cabecalho__logo">
+            <nav>
+                <ul class="cabecalho__lista-navegacao">
+                    <li class="cabecalho__link cabecalho__link--active"><a href="./index.html"> Perfil </a></li>
+                    <li class="cabecalho__link"><a href="./cadastro_produto.html"> Produtos </a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container flex flex--coluna flex--centro">
+            <div class="cadastro-cabecalho">
+                <img src="./assets/img/doguito.svg" alt="Logo" class="cadastro-cabecalho__logo">
+                <h1 class="cadastro-cabecalho__titulo"> PetShop </h1>
+            </div>
+            <section class="cartao">
+                <h2 class="cartao__titulo"> Complete seu cadastro </h2>
+                <form action="https://pruu.herokuapp.com/dump/test" method="post" target="_blank" class="formulario flex flex--coluna">
+                    <fieldset>
+                        <legend class="formulario__legenda"> Informações básicas </legend>
+                        <div class="input-container">
+                            <input id="nome" data-type="nome" name="nome" type="text" placeholder="Nome" required class="input">
+                            <label for="nome" class="input-label"> Nome </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                        <div class="input-container">
+                            <input id="email" data-type="email" name="email" type="email" placeholder="Email" required class="input">
+                            <label for="email" class="input-label"> Email </label>
+                            <span class="input-mensagem-erro">Este campo não está válido</span>
+                        </div>
+                        <div class="input-container">
+                            <input id="senha" data-type="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                                name="senha" type="password" placeholder="Senha" title="Deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra minúscula e maiúscula, um número e não deve conter símbolos." required class="input">
+                            <label for="senha" class="input-label"> Senha </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="formulario__legenda"> Informações pessoais </legend>
+                        <div class="input-container">
+                            <input id="nascimento" data-type="dataNascimento" name="nascimento" type="date" placeholder="Data de nascimento" required class="input">
+                            <label for="nascimento" class="input-label"> Data de nascimento </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                        <div class="input-container">
+                            <input id="cpf" date-type="cpf" name="cpf" type="text" placeholder="CPF" required class="input">
+                            <label for="cpf" class="input-label"> CPF </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="formulario__legenda"> Endereço </legend>
+                        <div class="input-container">
+                            <input id="cep" data-type="cep" pattern="[\d]{5}-?[\d]{3}" name="cep" type="text" placeholder="CEP" required class="input">
+                            <label for="cep" class="input-label"> CEP </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                        <div class="input-container">
+                            <input id="logradouro" name="logradouro" type="text" placeholder="Logradouro" class="input">
+                            <label for="logradouro" class="input-label"> Logradouro </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                        <div class="input-container">
+                            <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="input">
+                            <label for="cidade" class="input-label"> Cidade </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                        <div class="input-container">
+                            <input id="estado" name="estado" type="text" placeholder="Estado" class="input">
+                            <label for="estado" class="input-label"> Estado </label>
+                            <span class="input-mensagem-erro"> Este campo não está válido </span>
+                        </div>
+                    </fieldset>
+                    <button class="botao"> Cadastrar </a>
+                </form>
+            </section>
+        </main>
+        <script src="./assets/js/validacao.js" type="module"></script>
+    </body>
+</html>

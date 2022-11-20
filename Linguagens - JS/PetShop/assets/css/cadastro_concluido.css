@@ -1,0 +1,50 @@
+.cadastro-cabecalho {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.cadastro-cabecalho__logo {
+    margin-bottom: 0.5rem;
+    width: 2.625rem;
+}
+
+.cadastro-cabecalho__titulo {
+    font-family: var(--fonte-familia-logo);
+    font-size: var(--fonte-tamanho-logo);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.cadastro-cartao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cadastro-cartao__icone-concluido {
+    background-image: url(../img/checkmark.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    width: 3.5rem;
+}
+
+.cadastro-cartao__titulo {
+    max-width: 20rem;
+}
+
+@media(min-width: 800px) {
+    .cadastro-cabecalho__logo {
+        margin-bottom: 1rem;
+        width: 5.75rem;
+    }
+
+    .cadastro-cabecalho__titulo {
+        margin-bottom: 2rem;
+    }
+}

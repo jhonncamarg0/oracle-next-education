@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> PetShop | Cadastrar Produto </title>
+        <link href="./assets/img/doguito.svg" rel="icon">
+        <link href="./assets/css/base/reset.css" rel="stylesheet">
+        <link href="./assets/css/base/variaveis.css" rel="stylesheet">
+        <link href="./assets/css/base/base.css" rel="stylesheet">
+        <link href="./assets/css/componentes/cabecalho.css" rel="stylesheet">
+        <link href="./assets/css/componentes/cartao.css" rel="stylesheet">
+        <link href="./assets/css/componentes/inputs.css" rel="stylesheet">
+        <link href="./assets/css/componentes/botao.css" rel="stylesheet">
+        <link href="./assets/css/cadastro.css" rel="stylesheet">
+        <link href="./assets/css/cadastra_cliente.css" rel="stylesheet">
+        <link href="./assets/css/cadastro_produto.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="cabecalho container">
+            <img src="./assets/img/doguitoadm.svg" alt="Logo" class="cabecalho__logo">
+            <nav>
+                <ul class="cabecalho__lista-navegacao">
+                    <li class="cabecalho__link"><a href="./index.html"> Perfil </a></li>
+                    <li class="cabecalho__link cabecalho__link--active"><a href="./cadastro_produto.html"> Produtos </a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container flex flex--centro flex--coluna">
+            <div class="cadastro-cabecalho">
+                <img src="./assets/img/doguito.svg" alt="Logo" class="cadastro-cabecalho__logo">
+                <h1 class="cadastro-cabecalho__titulo"> PetShop </h1>
+            </div>
+            <section class="cartao cadastro">
+                <h1 class="cartao__titulo"> Cadastrar um produto </h1>
+                <form action="https://pruu.herokuapp.com/dump/test" method="post" target="_blank" class="flex flex--coluna">
+                    <div class="input-container">
+                        <input id="nome" data-type="nome" name="nome" type="text" placeholder="Nome" required class="input">
+                        <label for="nome" class="input-label"> Nome </label>
+                        <span class="input-mensagem-erro"> Este campo não está válido </span>
+                    </div>
+                    <div class="input-container cadastro__preco-container">
+                        <input id="preco" data-type="preco" name="preco" type="text" placeholder="Preço" required class="input">
+                        <label for="preco" class="input-label"> Preço </label>
+                        <span class="input-mensagem-erro"> Este campo não está válido </span>
+                    </div>
+                    <div class="input-container cadastro__descricao-container">
+                        <input id="descricao" name="descricao" placeholder="Descrição" class="input">
+                        <label for="descricao" class="input-label"> Descrição </label>
+                        <span class="input-mensagem-erro"> Este campo não está válido </span>
+                    </div>
+                    <button class="botao"> Cadastrar produto </button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

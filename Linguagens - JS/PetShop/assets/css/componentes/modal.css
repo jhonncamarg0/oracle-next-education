@@ -1,0 +1,58 @@
+.modal {
+    background-color: var(--cor-contraste-claro);
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 22.5rem;
+    padding: 1.75rem;
+    position: relative;
+}
+
+.modal-container {
+    align-items: center;
+    background-color: var(--cor-transparencia);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: 0.25s;
+    width: 100vw;
+}
+
+.modal__titulo {
+    color: var(--cor-aviso);
+    font-size: var(--fonte-tamanho-modal-titulo);
+    margin-bottom: 1rem;
+}
+
+.modal__botao {
+    font-size: var(--fonte-tamanho-modal-botao);
+}
+
+.modal__texto {
+    margin-bottom: 3.875rem;
+}
+
+.modal__botao--confirmar {
+    color: var(--cor-aviso);
+    margin-right: 2.25rem;
+}
+
+.modal__botao-container {
+    display: flex;
+}
+
+.modal__fechar {
+    display: block;
+    height: 1rem;
+    position: absolute;
+    right: 1.75rem;
+    top: 1.75rem;
+    width: 1rem;
+}
+
+.modal--fechado {
+    left: -100vw;
+    transition: .25s;
+}
