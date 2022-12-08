@@ -2,7 +2,7 @@
 
 ## 1. Trilha socioemocional de produtividade
 
-![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/000.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/desenvolvimento-pessoal/desenvolvimento-pessoal.jpg)
 
 ##
 
@@ -24,7 +24,7 @@
 
 ## 2. Trilha técnica de iniciante em programação
 
-![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/Certificados/001.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/iniciante-em-programacao/iniciante-em-programacao.jpg)
 
 ##
 
