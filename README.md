@@ -49,3 +49,53 @@
 
 #### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
 #### • https://cursos.alura.com.br/user/jhonncamarg0/course/git-github-controle-de-versao/certificate
+
+## 3. Trilha técnica de front-end
+
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/front-end/front-end.jpg)
+
+##
+
+### 💻 Habilidades técnicas desenvolvidas
+
+##
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS Flexbox
+#### •
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS Grid Layout
+#### •
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> Web Design Responsivo
+#### •
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> Arquitetura CSS
+#### •
+
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript
+#### •
+
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Manipulação do DOM e JSON
+#### •
+
+## 4. Trilha socioemocional de business agility
+
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/business-agility/business-agility.jpg)
+
+##
+
+### 👥 Habilidades socioemocionais desenvolvidas
+
+##
+
+####
+#### •
+
+####
+#### •
+
+####
+#### •
+
+####
+#### •
