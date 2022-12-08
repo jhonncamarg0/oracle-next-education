@@ -1,1 +1,7 @@
-
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/explorando-a-linguagem.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/manipule-o-dom-com-javascript.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/programando-a-orientacao-a-objetos.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/validacao-de-formularios-e-html5.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/interfaces-e-heranca-em-orientacao-a-objetos.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/armazenando-dados-no-navegador.jpg)
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/javascript/crud-com-javascript-assincrono.jpg)
