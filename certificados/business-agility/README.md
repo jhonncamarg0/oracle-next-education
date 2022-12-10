@@ -1,4 +1,8 @@
-#### <a href="https://cursos.alura.com.br/user/jhonncamarg0/degree-business-agility-turma3-one-407797/certificate" target="_blank"> • Certificado Oficial </a>
+### Certificado Oficial - Business Agility
+
+##
+
+#### <a href="https://cursos.alura.com.br/user/jhonncamarg0/degree-business-agility-turma3-one-407797/certificate" target="_blank"> • Business Agility </a>
 
 ##
 
