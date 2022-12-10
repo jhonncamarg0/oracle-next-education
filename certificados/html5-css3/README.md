@@ -1,7 +1,5 @@
 ### Certificados Oficiais
 
-##
-
 #### <a href="https://cursos.alura.com.br/user/jhonncamarg0/degree-front-end-turma3-one-431390/certificate" target="_blank"> • HTML5 e CSS3 I </a>
 #### <a href="https://cursos.alura.com.br/user/jhonncamarg0/degree-front-end-turma3-one-431390/certificate" target="_blank"> • HTML5 e CSS3 II </a>
 #### <a href="https://cursos.alura.com.br/user/jhonncamarg0/degree-front-end-turma3-one-431390/certificate" target="_blank"> • HTML5 e CSS3 III </a>
