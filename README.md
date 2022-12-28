@@ -49,3 +49,58 @@
 
 #### <img align="center" alt="J-Github" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"> Github
 #### • https://cursos.alura.com.br/user/jhonncamarg0/course/git-github-controle-de-versao/certificate
+
+## 3. Trilha técnica de front-end
+
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/front-end/front-end.jpg)
+
+##
+
+### 💻 Habilidades técnicas desenvolvidas
+
+##
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS Flexbox
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/posicione-elementos-com-flexbox/certificate
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS Grid Layout
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/css-grid-layout/certificate
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> Web Design Responsivo
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/mobile-first-layouts-responsivos/certificate
+
+#### <img align="center" alt="J-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> Arquitetura CSS
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/arquitetura-css/certificate
+
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascript-introducao/certificate
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascritpt-orientacao-objetos/certificate
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascript-polimorfismo/certificate
+
+#### <img align="center" alt="J-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> Manipulação do DOM e JSON
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascript-manipulacao-dom/certificate
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascript-web-validacao-formularios-html5/certificate
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/js-web-armazenando-dados-navegador/certificate
+#### • https://cursos.alura.com.br/user/jhonncamarg0/course/javascript-crud-assincrono/certificate
+
+## 4. Trilha socioemocional de business agility
+
+![NPM](https://github.com/jhonncamarg0/oracle-next-education/blob/main/certificados/business-agility/business-agility.jpg)
+
+##
+
+### 👥 Habilidades socioemocionais desenvolvidas
+
+##
+
+#### Agilidade
+#### • https://cursos.alura.com.br/certificate/jhonncamarg0/fundamentos-agilidade
+
+#### Gestão Ágil
+#### • https://cursos.alura.com.br/certificate/jhonncamarg0/gestao-agil
+
+#### Business Agility
+#### • https://cursos.alura.com.br/course/empresa-agil
+
+#### Organização de Equipes Ágeis
+#### • https://cursos.alura.com.br/course/organizando-equipes-ageis
